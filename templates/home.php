@@ -48,39 +48,39 @@ get_header();
   </div>
   <div class="grid md:grid-cols-2 grid-cols-1 gap-20 mt-78">
 
-    <?php foreach ($section_2["servicios"] as $idx => $servicio): ?>
-      <?php if ($idx < 4): ?>
-        <figure
-          class="relative md:w-433 md:h-325 w-full h-auto group [&_img]:w-full [&_img]:h-full [&_img]:object-cover overflow-hidden">
-          <?= wp_get_attachment_image($servicio['image'], 'full') ?>
-          <figcaption
-            class="absolute z-10 top-210 left-0 md:w-433 w-full md:h-full h-45 md:p-40 p-36 bg-black/10 transition-all duration-300 group-hover:top-0 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-end transition-all">
-            <h3 class="text-white mb-2rem"><?= $servicio["title"] ?></h3>
-            <p class="md:text-16 text-13 text-white "><?= $servicio["text"] ?></p>
-          </figcaption>
-        </figure>
-      <?php endif; ?>
-    <?php endforeach; ?>
+    <?php
+    if ($section_2["servicios"]):
+      foreach ($section_2["servicios"] as $idx => $servicio):
+        if ($idx < 4): ?>
+          <figure
+            class="relative md:w-433 md:h-325 w-full h-auto group [&_img]:w-full [&_img]:h-full [&_img]:object-cover overflow-hidden">
+            <?= wp_get_attachment_image($servicio['image'], 'full') ?>
+            <figcaption
+              class="absolute z-10 top-210 left-0 md:w-433 w-full md:h-full h-45 md:p-40 p-36 bg-black/10 transition-all duration-300 group-hover:top-0 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-end transition-all">
+              <h3 class="text-white mb-2rem"><?= $servicio["title"] ?></h3>
+              <p class="md:text-16 text-13 text-white "><?= $servicio["text"] ?></p>
+            </figcaption>
+          </figure>
+          <?php
+        endif;
+      endforeach;
+    endif; ?>
   </div>
   <div class="px-80 mt-90">
     <div id="carousel" class="splide">
       <div class="splide__track">
         <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="https://placehold.co/600x400" alt="" class="w-150 h-150 object-contain">
-          </li>
-          <li class="splide__slide">
-            <img src="https://placehold.co/600x400" alt="" class="w-150 h-150 object-contain">
-          </li>
-          <li class="splide__slide">
-            <img src="https://placehold.co/600x400" alt="" class="w-150 h-150 object-contain">
-          </li>
-          <li class="splide__slide">
-            <img src="https://placehold.co/600x400" alt="" class="w-150 h-150 object-contain">
-          </li>
-          <li class="splide__slide">
-            <img src="https://placehold.co/600x400" alt="" class="w-150 h-150 object-contain">
-          </li>
+          <?php
+          if ($section_2["marcas"]):
+            foreach ($section_2["marcas"] as $idx => $marca):
+              ?>
+              <li class="splide__slide [&_img]:w-150 [&_img]:h-150 [&_img]:object-contain">
+                <?= wp_get_attachment_image($marca['logo_marca'], 'full') ?>
+              </li>
+              <?php
+            endforeach;
+          endif;
+          ?>
         </ul>
       </div>
     </div>
