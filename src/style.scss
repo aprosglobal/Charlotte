@@ -258,3 +258,16 @@ h3 {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+// -------------------------------------
+// --------------------- SECTION 8 ---------------------
+
+#carousel2 .splide__arrow--prev {
+  @apply left--10 bg-transparent
+}
+
+#carousel2 .splide__arrow--next {
+  @apply md:right--8 right--10 bg-transparent
+}
+
+// --------------------------------------------------------

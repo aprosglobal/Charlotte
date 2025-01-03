@@ -13,6 +13,7 @@ $section_7 = get_field('seccion_7');
 $section_8 = get_field('seccion_8');
 $section_9 = get_field('seccion_9');
 $section_10 = get_field('seccion_10');
+$whatsapp = get_field('whatsapp', 'option');
 
 get_header();
 ?>
@@ -20,7 +21,7 @@ get_header();
 <section class="mt-86">
 
   <video src="<?= $section_1["video"] ?>" loop controls class="w-full"></video>
-  <div class="bg-rojo py-30 my-42">
+  <div class="bg-rojo py-72">
     <div class="md:w-590 w-full md:px-0 px-66 mx-auto">
       <h1 class="text-center font-bold font-frank md:text-35 text-20 lei104% "><?= $section_1["title"] ?></h1>
 
@@ -39,19 +40,20 @@ get_header();
   </div>
 </section>
 <!-- ------------ SECTION 2 ----------------- -->
-<section id="servicios" class="md:container mt-107">
-  <h2 class="text-center md:px-0 px-66"><?= $section_2["title"] ?></h2>
-  <div class="flex justify-center items-center gap-12 mt-55">
-    <div class="w-22 h-1 bg-amarillo"></div>
-    <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_2["phrase"] ?></span>
-    <div class="w-22 h-1 bg-amarillo"></div>
-  </div>
-  <div class="grid md:grid-cols-2 grid-cols-1 gap-20 mt-78">
+<section id="servicios" class="mt-107">
+  <div class="md:container">
+    <h2 class="text-center md:px-0 px-66"><?= $section_2["title"] ?></h2>
+    <div class="flex justify-center items-center gap-12 mt-55">
+      <div class="w-22 h-1 bg-amarillo"></div>
+      <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_2["phrase"] ?></span>
+      <div class="w-22 h-1 bg-amarillo"></div>
+    </div>
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-20 mt-78">
 
-    <?php
-    if ($section_2["servicios"]):
-      foreach ($section_2["servicios"] as $idx => $servicio):
-        if ($idx < 4): ?>
+      <?php
+      if ($section_2["servicios"]):
+        foreach ($section_2["servicios"] as $servicio):
+          ?>
           <figure
             class="relative md:w-433 md:h-325 w-full h-auto group [&_img]:w-full [&_img]:h-full [&_img]:object-cover overflow-hidden">
             <?= wp_get_attachment_image($servicio['image'], 'full') ?>
@@ -62,17 +64,17 @@ get_header();
             </figcaption>
           </figure>
           <?php
-        endif;
-      endforeach;
-    endif; ?>
+        endforeach;
+      endif; ?>
+    </div>
   </div>
-  <div class="px-80 mt-90">
-    <div id="carousel" class="splide">
+  <div class="px-80 mt-90 md:px-313 bg-rojo">
+    <div id="carousel" class="splide w-full">
       <div class="splide__track">
         <ul class="splide__list">
           <?php
           if ($section_2["marcas"]):
-            foreach ($section_2["marcas"] as $idx => $marca):
+            foreach ($section_2["marcas"] as $marca):
               ?>
               <li class="splide__slide [&_img]:w-150 [&_img]:h-150 [&_img]:object-contain">
                 <?= wp_get_attachment_image($marca['logo_marca'], 'full') ?>
@@ -166,24 +168,32 @@ get_header();
         <div class="splide" id="slider-linea">
           <div class="splide__track">
             <ul class="splide__list">
+              <?php
+              if ($section_6["time_line"]):
+                foreach ($section_6["time_line"] as $idx => $time):
+                  ?>
+                  <li class="splide__slide">
+                    <div
+                      class="card-linea__item <?= (($idx + 1) % 2 == 1) ? 'impar' : 'par'; ?> [&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200 [&_img]:mx-auto [&_img]:object-cover [&_img]:rounded-full">
+                      <!-- <img src="https://placehold.co/600x400" alt=""
+                        class="flex-shrink-0 w-100 md:w-200 h-100 md:h-200 mx-auto object-cover rounded-full"> -->
+                      <?= wp_get_attachment_image($time['image'], 'full') ?>
+                      <div>
+                        <div class="text-25 md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
+                          <?= $time["year"] ?>
+                        </div>
+                        <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202">
+                          <?= $time["text"] ?>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <?php
+                endforeach;
+              endif;
+              ?>
 
-              <li class="splide__slide">
-                <div class="card-linea__item impar">
-                  <img src="https://placehold.co/600x400" alt=""
-                    class="flex-shrink-0 w-100 md:w-200 h-100 md:h-200 mx-auto object-cover rounded-full">
-                  <div>
-
-                    <div class="text-25 md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
-                      2001</div>
-
-                    <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202">
-                      Nuestra fundación, empezamos con la elaboracion de exquisitas tortas y postres.</div>
-
-                  </div>
-                </div>
-              </li>
-
-              <li class="splide__slide">
+              <!-- <li class="splide__slide">
                 <div class="card-linea__item par">
                   <img src="https://placehold.co/600x400" alt=""
                     class="flex-shrink-0 w-100 md:w-200 h-100 md:h-200 mx-auto object-cover rounded-full">
@@ -249,7 +259,7 @@ get_header();
 
                   </div>
                 </div>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -266,43 +276,44 @@ get_header();
     <div class="w-22 h-1 bg-amarillo"></div>
   </div>
   <div class="grid md:grid-cols-2 grid-cols-1 gap-20">
-    <figure>
-      <img src="https://placehold.co/600x400" alt="" class="w-full h-326 object-cover">
-      <figcaption class="p-40 bg-plomo3 mt-15">
-        <h3 class="text-naranja mb-2rem">Concesionario de Alimentos</h3>
-        <p class="md:text-16 text-13 !text-black">Transformamos los comedores en espacios acogedores, ofreciendo
-          opciones
-          de comida
-          deliciosa y
-          saludable
-          adaptadas a las necesidades y preferencias de tus colaboradores. Destacamos por nuestra variedad de opciones
-          frescas y sabrosas que se ajustan a cualquier preferencia alimentaria.</p>
-      </figcaption>
-    </figure>
-    <figure>
-      <img src="https://placehold.co/600x400" alt="" class="w-full h-326 object-cover">
-      <figcaption class="p-40 bg-plomo3 mt-15">
-        <h3 class="text-naranja leading-150%">Concesionario de Alimentos</h3>
-        <p class="md:text-16 text-13 !text-black">Transformamos los comedores en espacios acogedores, ofreciendo
-          opciones
-          de comida
-          deliciosa y
-          saludable
-          adaptadas a las necesidades y preferencias de tus colaboradores. Destacamos por nuestra variedad de opciones
-          frescas y sabrosas que se ajustan a cualquier preferencia alimentaria.</p>
-      </figcaption>
-    </figure>
+    <?php
+    if ($section_7["cards"]):
+      foreach ($section_7["cards"] as $card):
+        ?>
+        <figure class="[&_img]:w-full [&_img]:h-326 [&_img]:object-cover">
+          <?= wp_get_attachment_image($card['image'], 'full') ?>
+          <figcaption class="p-40 bg-plomo3 mt-15">
+            <h3 class="text-naranja mb-2rem"><?= $card["title"] ?></h3>
+            <p class="md:text-16 text-13 !text-black"><?= $card["text"] ?></p>
+          </figcaption>
+        </figure>
+        <?php
+      endforeach;
+    endif;
+    ?>
   </div>
 </section>
 <!-- ------------------ SECTION 8 ----------------- -->
-<section class="container my-108 py-50 bg-rojo">
+<section class="my-108 py-50 bg-rojo">
   <div class="md:w-590 w-full mx-auto">
     <h2 class="text-center leading-180%"><?= $section_8["title"] ?></h2>
     <p class="text-center md:text-16 text-13"><?= $section_8["text"] ?></p>
-    <div class="w-full flex md:flex-row flex-col gap-30 justify-center items-center mt-43">
-      <img src="https://placehold.co/600x400" alt="" class="w-190 h-200 object-contain">
-      <img src="https://placehold.co/600x400" alt="" class="w-190 h-200 object-contain">
-      <img src="https://placehold.co/600x400" alt="" class="w-190 h-200 object-contain">
+    <div id="carousel2" class="splide w-full">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <?php
+          if ($section_8["logos"]):
+            foreach ($section_8["logos"] as $logo):
+              ?>
+              <li class="splide__slide [&_img]:w-180 [&_img]:h-200 [&_img]:object-contain">
+                <?= wp_get_attachment_image($logo['image'], 'full') ?>
+              </li>
+              <?php
+            endforeach;
+          endif;
+          ?>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -365,5 +376,12 @@ get_header();
     </div>
   </div>
 </section>
+<?php if ($whatsapp["whatsapp"] && $whatsapp["boton_whatsapp"]): ?>
+  <a href="<?= $whatsapp["whatsapp"] ?>" class="fixed bottom-0 right-0">
+    <div style="background-image: url('<?= $whatsapp["boton_whatsapp"] ?>');"
+      class="h-80 w-80 rounded-5 bg-cover bg-norepeat">
+    </div>
+  </a>
+<?php endif; ?>
 <?php
 get_footer();
