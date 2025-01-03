@@ -19,7 +19,7 @@ get_header();
 <!-- ------------ SECTION 1 ----------------- -->
 <section class="mt-86">
 
-  <video src="<?= $section_1["video"] ?>" autoplay loop controls class="w-full"></video>
+  <video src="<?= $section_1["video"] ?>" loop controls class="w-full"></video>
   <div class="bg-rojo py-30 my-42">
     <div class="md:w-590 w-full md:px-0 px-66 mx-auto">
       <h1 class="text-center font-bold font-frank md:text-35 text-20 lei104% "><?= $section_1["title"] ?></h1>
@@ -47,67 +47,20 @@ get_header();
     <div class="w-22 h-1 bg-amarillo"></div>
   </div>
   <div class="grid md:grid-cols-2 grid-cols-1 gap-20 mt-78">
-    <figure class="relative md:w-433 md:h-325 w-full h-auto group">
-      <img src="https://placehold.co/600x400" alt="" class="w-full h-full object-cover">
-      <figcaption
-        class="absolute z-10 bottom-0 left-0 md:w-433 w-full md:h-90 h-45 md:p-40 p-36 bg-black/10 transition-all duration-300 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-end">
-        <h3 class="text-white">Concesionario de Alimentos</h3>
-        <p class="md:text-16 text-13 text-white hidden group-hover:block">Transformamos los comedores en espacios
-          acogedores,
-          ofreciendo opciones de
-          comida
-          deliciosa y
-          saludable
-          adaptadas a las necesidades y preferencias de tus colaboradores. Destacamos por nuestra variedad de opciones
-          frescas y sabrosas que se ajustan a cualquier preferencia alimentaria.</p>
-      </figcaption>
-    </figure>
-    <figure class="relative md:w-433 md:h-325 w-full h-auto group">
-      <img src="https://placehold.co/600x400" alt="" class="w-full h-full object-cover">
-      <figcaption
-        class="absolute z-10 bottom-0 left-0 md:w-433 w-full md:h-90 h-45 md:p-40 p-36 bg-black/10 transition-all duration-300 group-hover:h-full group-hover:bg-black/50  flex flex-col justify-end">
-        <h3 class="text-white">Concesionario de Alimentos</h3>
-        <p class="md:text-16 text-13 text-white hidden group-hover:block">Transformamos los comedores en espacios
-          acogedores,
-          ofreciendo opciones de
-          comida
-          deliciosa y
-          saludable
-          adaptadas a las necesidades y preferencias de tus colaboradores. Destacamos por nuestra variedad de opciones
-          frescas y sabrosas que se ajustan a cualquier preferencia alimentaria.</p>
-      </figcaption>
-    </figure>
-    <figure class="relative md:w-433 md:h-325 w-full h-auto group">
-      <img src="https://placehold.co/600x400" alt="" class="w-full h-full object-cover">
-      <figcaption
-        class="absolute z-10 bottom-0 left-0 md:w-433 w-full md:h-90 h-45 md:p-40 p-36 bg-black/10 transition-all duration-300 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-end">
-        <h3 class="text-white">Concesionario de Alimentos</h3>
-        <p class="md:text-16 text-13 text-white hidden group-hover:block">Transformamos los comedores en espacios
-          acogedores,
-          ofreciendo opciones de
-          comida
-          deliciosa y
-          saludable
-          adaptadas a las necesidades y preferencias de tus colaboradores. Destacamos por nuestra variedad de opciones
-          frescas y sabrosas que se ajustan a cualquier preferencia alimentaria.</p>
-      </figcaption>
-    </figure>
-    <figure class="relative md:w-433 md:h-325 w-full h-auto group">
-      <img src="https://placehold.co/600x400" alt="" class="w-full h-full object-cover">
-      <figcaption
-        class="absolute z-10 bottom-0 left-0 md:w-433 w-full md:h-90 h-45 md:p-40 p-36 bg-black/10 transition-all duration-300 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-end">
-        <h3 class="text-white">Concesionario de Alimentos</h3>
-        <p class="md:text-16 text-13 text-white hidden group-hover:block">Transformamos los comedores en espacios
-          acogedores,
-          ofreciendo opciones de
-          comida
-          deliciosa y
-          saludable
-          adaptadas a las necesidades y preferencias de tus colaboradores. Destacamos por nuestra variedad de opciones
-          frescas y sabrosas que se ajustan a cualquier preferencia alimentaria.</p>
-      </figcaption>
-    </figure>
 
+    <?php foreach ($section_2["servicios"] as $idx => $servicio): ?>
+      <?php if ($idx < 4): ?>
+        <figure
+          class="relative md:w-433 md:h-325 w-full h-auto group [&_img]:w-full [&_img]:h-full [&_img]:object-cover overflow-hidden">
+          <?= wp_get_attachment_image($servicio['image'], 'full') ?>
+          <figcaption
+            class="absolute z-10 top-210 left-0 md:w-433 w-full md:h-full h-45 md:p-40 p-36 bg-black/10 transition-all duration-300 group-hover:top-0 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-end transition-all">
+            <h3 class="text-white mb-2rem"><?= $servicio["title"] ?></h3>
+            <p class="md:text-16 text-13 text-white "><?= $servicio["text"] ?></p>
+          </figcaption>
+        </figure>
+      <?php endif; ?>
+    <?php endforeach; ?>
   </div>
   <div class="px-80 mt-90">
     <div id="carousel" class="splide">
@@ -316,7 +269,7 @@ get_header();
     <figure>
       <img src="https://placehold.co/600x400" alt="" class="w-full h-326 object-cover">
       <figcaption class="p-40 bg-plomo3 mt-15">
-        <h3 class="text-naranja leading-150%">Concesionario de Alimentos</h3>
+        <h3 class="text-naranja mb-2rem">Concesionario de Alimentos</h3>
         <p class="md:text-16 text-13 !text-black">Transformamos los comedores en espacios acogedores, ofreciendo
           opciones
           de comida
@@ -375,7 +328,7 @@ get_header();
         <input type="email" placeholder="Correo electronico*" class="!border-amarillo !rounded-8 !bg-transparent"
           required>
         <textarea name="" id="" cols="30" rows="5" placeholder="Mensaje"
-          class="col-span-2 pl-15 !border-amarillo !rounded-8 !bg-transparent"></textarea>
+          class="col-span-2 pl-15 pt-10 !border-amarillo !rounded-8 !bg-transparent"></textarea>
         <button class="w-121 h-43 rounded-8 bg-naranja/40 hover:bg-naranja text-white font-bold text-16">ENVIAR</button>
       </div>
     </div>

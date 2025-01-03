@@ -21,7 +21,7 @@
         'theme_location' => 'primary',
         'container_class' => "menu-primary-container md:block hidden",
         'container' => 'nav',
-        'menu_class' => "flex gap-20 [&_a]:text-black [&_a]:font-600 [&_a]:text-14 [&_a]:font-oswald, hover:[&_a]:text-naranja",
+        'menu_class' => "flex gap-20 [&_a]:text-black [&_a]:font-600 [&_a]:text-18 [&_a]:font-oswald, hover:[&_a]:text-naranja",
       )
     );
     ?>
