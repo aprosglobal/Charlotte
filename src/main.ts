@@ -67,4 +67,22 @@ if (document.querySelector("#slider-linea")) {
   sliderInicio.mount();
 }
 
+// -------------- SECTION 8 -------------------------
 
+const carousel2 = document.querySelector("#carousel2") as HTMLElement;
+const slides2 = document.querySelectorAll("#carousel2 .splide__slide");
+if (carousel2) {
+  const splide2 = new Splide(carousel2, {
+    type: "slide",
+    rewind: true,
+    speed: 1000,
+    pagination: false,
+    arrows: (slides2.length >= 4) ? true : false,
+    drag: (slides2.length >= 4) ? true : false,
+    perPage: 3,
+    gap: "15px",
+  });
+  splide2.mount();
+}
+
+// ------------------------------------------------------

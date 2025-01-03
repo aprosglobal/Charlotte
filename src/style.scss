@@ -31,7 +31,7 @@ h3 {
 }
 
 #menu-menu-principal li:nth-child(4) {
-  @apply ml-20;
+  @apply ml-24;
 
   a {
     @apply relative;
@@ -41,7 +41,7 @@ h3 {
 
 #menu-menu-principal li:nth-child(4) a::before {
   content: '';
-  @apply w-20 h-20 block absolute top-50% left--5;
+  @apply w-20 h-20 block absolute top-50% left--6;
   background-image: url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2024/09/colegio4x.png');
   background-size: contain;
   background-position: center;
@@ -258,3 +258,16 @@ h3 {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+// -------------------------------------
+// --------------------- SECTION 8 ---------------------
+
+#carousel2 .splide__arrow--prev {
+  @apply left--10 bg-transparent
+}
+
+#carousel2 .splide__arrow--next {
+  @apply md:right--8 right--10 bg-transparent
+}
+
+// --------------------------------------------------------
