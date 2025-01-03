@@ -42,8 +42,6 @@ export default defineConfig({
   shortcuts: [],
   theme: {
     colors: {
-
-      // #ED8A42
       naranja: "#EC8A3F",
       azul: "#3E7EA6",
       amarillo: "#EAB317",
