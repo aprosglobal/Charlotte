@@ -10,7 +10,7 @@
 <body>
 
   <header class="px-100 w-full h-86 flex items-center justify-between fixed z-500 top-0 left-0 bg-white">
-    <div class="[&_img]:w-148 [&_img]:h-auto [&_img]:onject-contain">
+    <div class="[&_img]:w-200 [&_img]:h-auto [&_img]:onject-contain">
       <?php if (function_exists('the_custom_logo')) {
         the_custom_logo();
       } ?>
