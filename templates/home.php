@@ -357,15 +357,15 @@ get_header();
   </div>
 </section>
 <!-- ------------------ SECTION 10 ----------------- -->
-<section class="w-full mt-90 flex md:flex-row flex-col justify-between gap-20">
-  <div class="[&_img]:md:w-241 [&_img]:w-full [&_img]:h-217 [&_img]:object-cover">
+<section class="w-full mt-90 flex md:flex-row flex-col justify-between gap-18">
+  <div class="md:w-20% w-full [&_img]:w-full [&_img]:h-217 [&_img]:object-cover">
     <?= wp_get_attachment_image($section_10['imagen_1'], 'full') ?>
   </div>
-  <div class="[&_img]:md:w-397 [&_img]:w-full [&_img]:h-217 [&_img]:object-cover">
+  <div class="md:w-30% w-full [&_img]:w-full [&_img]:h-217 [&_img]:object-cover">
     <?= wp_get_attachment_image($section_10['imagen_2'], 'full') ?>
   </div>
 
-  <div class="pt-47 px-54 bg-blue md:w-669 w-full h-217 flex justify-between forma-parte">
+  <div class="pt-47 px-54 bg-blue md:w-50% w-full h-217 flex justify-between forma-parte">
     <div class="flex flex-col">
       <span class="font-covered md:text-20 text-16 text-amarillo">Unete al equipo</span>
       <p class="font-bond text-22 text-white"> FORMA PARTE DE CHARLOTTE</p>
@@ -376,6 +376,8 @@ get_header();
     </div>
   </div>
 </section>
+<!-- ----------------------------------------- -->
+<!-- ------------------ BTN WHATSAPP ----------------- -->
 <?php if ($whatsapp["whatsapp"] && $whatsapp["boton_whatsapp"]): ?>
   <a href="<?= $whatsapp["whatsapp"] ?>" class="fixed bottom-0 right-0">
     <div style="background-image: url('<?= $whatsapp["boton_whatsapp"] ?>');"
@@ -383,5 +385,6 @@ get_header();
     </div>
   </a>
 <?php endif; ?>
+<!-- ---------------------------------------------------- -->
 <?php
 get_footer();
