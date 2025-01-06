@@ -57,11 +57,14 @@ if (document.querySelector("#slider-linea")) {
     arrows: false,
     perPage: 1,
     perMove: 1,
-    start: 3,
+    start: 4,
     breakpoints: {
+      1536: {
+        start: 3,
+      },
       768: {
         start: 0,
-      },
+      }
     },
   });
   sliderInicio.mount();
