@@ -58,15 +58,18 @@ if (document.querySelector("#slider-linea")) {
     perPage: 1,
     perMove: 1,
     start: 4,
+
     breakpoints: {
       1536: {
         start: 3,
+
       },
       768: {
         start: 0,
       }
     },
   });
+
   sliderInicio.mount();
 }
 
@@ -91,22 +94,19 @@ if (carousel2) {
 // ------------------------------------------------------
 // ---------------- BOTON WHATSAPP -----------------
 const btn_wsp = document.querySelector('.btn-wsp') as HTMLElement;
-const footer = document.querySelector("#div-footer");
 
-if (btn_wsp && footer) {
+document.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY; // Posición actual del scroll vertical
+  const scrollHeight = document.documentElement.scrollHeight; // Altura total del documento
+  const clientHeight = document.documentElement.clientHeight; // Altura del área visible (viewport)
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        btn_wsp.classList.remove('bottom-0');
-        btn_wsp.classList.add('bottom-80'); // Cambia el estilo (puedes modificar esto)
-      } else {
-        btn_wsp.classList.remove('bottom-80');
-        btn_wsp.classList.add('bottom-0'); // Estilo original
-      }
-    });
-  });
+  const isAtBottom = scrollTop + clientHeight >= scrollHeight - 5; // Detecta si está al final (con un margen)
 
-  observer.observe(footer);
-}
-
+  if (isAtBottom) {
+    btn_wsp.style.transform = "translateY(-95%)";
+    btn_wsp.style.transition = "transform 0.5s ease";
+  } else {
+    btn_wsp.style.transform = "translateY(0)";
+  }
+});
+// -------------------------------------------------------

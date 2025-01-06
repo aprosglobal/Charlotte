@@ -310,7 +310,7 @@ get_header();
 <!-- ----------------------------------------- -->
 <!-- ------------------ BTN WHATSAPP ----------------- -->
 <?php if ($whatsapp["whatsapp"] && $whatsapp["boton_whatsapp"]): ?>
-  <a href="<?= $whatsapp["whatsapp"] ?>" class="btn-wsp fixed bottom-0 right-0 transition-all">
+  <a href="<?= $whatsapp["whatsapp"] ?>" class="btn-wsp fixed bottom-0 right-0 ">
     <div style="background-image: url('<?= $whatsapp["boton_whatsapp"] ?>');"
       class="h-80 w-80 rounded-5 bg-cover bg-norepeat">
     </div>
