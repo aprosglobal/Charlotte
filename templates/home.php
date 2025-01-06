@@ -175,8 +175,7 @@ get_header();
                   <li class="splide__slide">
                     <div
                       class="card-linea__item <?= (($idx + 1) % 2 == 1) ? 'impar' : 'par'; ?> [&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200 [&_img]:mx-auto [&_img]:object-cover [&_img]:rounded-full">
-                      <!-- <img src="https://placehold.co/600x400" alt=""
-                        class="flex-shrink-0 w-100 md:w-200 h-100 md:h-200 mx-auto object-cover rounded-full"> -->
+
                       <?= wp_get_attachment_image($time['image'], 'full') ?>
                       <div>
                         <div class="text-25 md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
@@ -192,74 +191,6 @@ get_header();
                 endforeach;
               endif;
               ?>
-
-              <!-- <li class="splide__slide">
-                <div class="card-linea__item par">
-                  <img src="https://placehold.co/600x400" alt=""
-                    class="flex-shrink-0 w-100 md:w-200 h-100 md:h-200 mx-auto object-cover rounded-full">
-                  <div>
-
-                    <div class="text-25 md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
-                      2002</div>
-
-                    <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202">
-                      Iniciamos nuestro servicio de alimentación de comida saludable transportada, marcando un hito en
-                      la historia culinaria del Perú.</div>
-
-                  </div>
-                </div>
-              </li>
-
-              <li class="splide__slide">
-                <div class="card-linea__item impar">
-                  <img src="https://placehold.co/600x400" alt=""
-                    class="flex-shrink-0 w-100 md:w-200 h-100 md:h-200 mx-auto object-cover rounded-full">
-                  <div>
-
-                    <div class="text-25 md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
-                      2003</div>
-
-                    <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202">
-                      Iniciamos nuestro servicio de alimentación de comida saludable transportada, marcando un hito en
-                      la historia culinaria del Perú.</div>
-
-                  </div>
-                </div>
-              </li>
-
-              <li class="splide__slide">
-                <div class="card-linea__item par">
-                  <img src="https://placehold.co/600x400" alt=""
-                    class="flex-shrink-0 w-100 md:w-200 h-100 md:h-200 mx-auto object-cover rounded-full">
-                  <div>
-
-                    <div class="text-25 md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
-                      2004</div>
-
-                    <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202">
-                      Iniciamos nuestro servicio de alimentación de comida saludable transportada, marcando un hito en
-                      la historia culinaria del Perú.</div>
-
-                  </div>
-                </div>
-              </li>
-
-              <li class="splide__slide">
-                <div class="card-linea__item impar">
-                  <img src="https://placehold.co/600x400" alt=""
-                    class="flex-shrink-0 w-100 md:w-200 h-100 md:h-200 mx-auto object-cover rounded-full">
-                  <div>
-
-                    <div class="text-25 md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
-                      2005</div>
-
-                    <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202">
-                      Iniciamos nuestro servicio de alimentación de comida saludable transportada, marcando un hito en
-                      la historia culinaria del Perú.</div>
-
-                  </div>
-                </div>
-              </li> -->
             </ul>
           </div>
         </div>
@@ -379,7 +310,7 @@ get_header();
 <!-- ----------------------------------------- -->
 <!-- ------------------ BTN WHATSAPP ----------------- -->
 <?php if ($whatsapp["whatsapp"] && $whatsapp["boton_whatsapp"]): ?>
-  <a href="<?= $whatsapp["whatsapp"] ?>" class="fixed bottom-0 right-0">
+  <a href="<?= $whatsapp["whatsapp"] ?>" class="btn-wsp fixed bottom-0 right-0 ">
     <div style="background-image: url('<?= $whatsapp["boton_whatsapp"] ?>');"
       class="h-80 w-80 rounded-5 bg-cover bg-norepeat">
     </div>

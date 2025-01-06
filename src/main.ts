@@ -57,13 +57,19 @@ if (document.querySelector("#slider-linea")) {
     arrows: false,
     perPage: 1,
     perMove: 1,
-    start: 3,
+    start: 4,
+
     breakpoints: {
+      1536: {
+        start: 3,
+
+      },
       768: {
         start: 0,
-      },
+      }
     },
   });
+
   sliderInicio.mount();
 }
 
@@ -86,3 +92,21 @@ if (carousel2) {
 }
 
 // ------------------------------------------------------
+// ---------------- BOTON WHATSAPP -----------------
+const btn_wsp = document.querySelector('.btn-wsp') as HTMLElement;
+
+document.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY; // Posición actual del scroll vertical
+  const scrollHeight = document.documentElement.scrollHeight; // Altura total del documento
+  const clientHeight = document.documentElement.clientHeight; // Altura del área visible (viewport)
+
+  const isAtBottom = scrollTop + clientHeight >= scrollHeight - 5; // Detecta si está al final (con un margen)
+
+  if (isAtBottom) {
+    btn_wsp.style.transform = "translateY(-95%)";
+    btn_wsp.style.transition = "transform 0.5s ease";
+  } else {
+    btn_wsp.style.transform = "translateY(0)";
+  }
+});
+// -------------------------------------------------------
