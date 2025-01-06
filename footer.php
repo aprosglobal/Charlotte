@@ -19,7 +19,7 @@ wp_footer();
     endif;
     ?>
     <a href="<?= $footer["libro_reclamaciones"]['url'] ?>" target="<?= $footer["libro_reclamaciones"]['target'] ?>"
-      class="px-10 py-6 rounded-5 border-1 border-solid border-white text-white font-600">
+      class="px-10 py-6 rounded-5 border-1 border-solid border-white text-white font-600 hover:bg-azul !text-white">
       <?= $footer["libro_reclamaciones"]['title'] ?>
     </a>
   </div>

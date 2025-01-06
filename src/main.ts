@@ -68,7 +68,26 @@ if (document.querySelector("#slider-linea")) {
         start: 0,
       }
     },
+
   });
+
+  sliderInicio.on('moved', function (newIndex) {
+
+    const windowWidth = window.innerWidth;
+    if (windowWidth <= 768) {
+      if (newIndex < 0) {
+        sliderInicio.go(0)
+      }
+    } else if (windowWidth <= 1536) {
+      if (newIndex < 3) {
+        sliderInicio.go(3)
+      }
+    } else {
+      if (newIndex < 4) {
+        sliderInicio.go(4)
+      }
+    }
+  })
 
   sliderInicio.mount();
 }
