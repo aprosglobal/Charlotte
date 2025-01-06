@@ -89,3 +89,24 @@ if (carousel2) {
 }
 
 // ------------------------------------------------------
+// ---------------- BOTON WHATSAPP -----------------
+const btn_wsp = document.querySelector('.btn-wsp') as HTMLElement;
+const footer = document.querySelector("#div-footer");
+
+if (btn_wsp && footer) {
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        btn_wsp.classList.remove('bottom-0');
+        btn_wsp.classList.add('bottom-80'); // Cambia el estilo (puedes modificar esto)
+      } else {
+        btn_wsp.classList.remove('bottom-80');
+        btn_wsp.classList.add('bottom-0'); // Estilo original
+      }
+    });
+  });
+
+  observer.observe(footer);
+}
+
