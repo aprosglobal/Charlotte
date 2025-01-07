@@ -58,9 +58,10 @@ get_header();
             class="relative md:w-433 md:h-325 w-full h-auto group [&_img]:w-full [&_img]:h-full [&_img]:object-cover overflow-hidden">
             <?= wp_get_attachment_image($servicio['image'], 'full') ?>
             <figcaption
-              class="absolute z-10 md:top-210 top-295 left-0 md:w-433 w-full md:h-full h-45 md:p-40 px-36 py-18 bg-black/10 transition-all duration-300 group-hover:top-0 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-end transition-all">
-              <h3 class="text-white mb-2rem"><?= $servicio["title"] ?></h3>
-              <p class="md:text-16 text-13 text-white "><?= $servicio["text"] ?></p>
+              class="absolute z-10 md:top-230 top-145 left-0 md:w-433 w-full h-full md:p-40 px-36 py-18 bg-black/30 duration-300 group-hover:top-0 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-start group-hover:justify-end transition-all">
+              <h3 class="text-naranja mb-2rem" style="text-shadow: #FC0 1px 0 10px;"><?= $servicio["title"] ?></h3>
+              <p class="md:text-16 text-13 text-white"><?= $servicio["text"] ?>
+              </p>
             </figcaption>
           </figure>
           <?php
