@@ -15,8 +15,6 @@ h3 {
   ;
 }
 
-
-
 // --------------- HEADER --------------------
 #menu-menu-principal li:last-child {
   @apply rounded-full px-10 bg-naranja hover:bg-cafe2 h-30 flex justify-center items-center;
@@ -211,11 +209,11 @@ h3 {
 // --------------------- SECTION 8 ---------------------
 
 #carousel2 .splide__arrow--prev {
-  @apply left--10 bg-transparent
+  @apply md:left--10 left-0 bg-transparent
 }
 
 #carousel2 .splide__arrow--next {
-  @apply md:right--8 right--10 bg-transparent
+  @apply md:right--8 right-0 bg-transparent
 }
 
 // --------------------------------------------------------
