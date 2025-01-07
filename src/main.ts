@@ -144,7 +144,7 @@ li_menu_mobile.forEach((ancla) => {
   ancla.addEventListener('click', function () {
     setTimeout(() => {
       menu_mobile.classList.toggle('h-0');
-      menu_mobile.classList.toggle('!p-20');
+      menu_mobile.classList.toggle('p-20');
     }, 300);
   });
 });
