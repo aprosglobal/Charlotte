@@ -50,6 +50,8 @@ export default defineConfig({
       cafe2: "#ca783d",
       rojo: "#ed8a4212",
       plomo3: "#F3F3F2",
+      crema: "#ffe29c",
+      mostaza: "#efc44b",
     },
     fontFamily: {
       oswald: ["Oswald", "sans-serif"],

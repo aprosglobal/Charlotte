@@ -4,7 +4,7 @@ wp_footer();
 ?>
 
 <footer id="div-footer"
-  class="w-full md:h-80 h-auto px-18 bg-naranja flex md:flex-row flex-col justify-between items-center">
+  class="w-full md:h-80 h-auto px-18 bg-naranja flex md:flex-row flex-col justify-between items-center md:py-0 py-20">
   <p class="text-16 text-white"><?= $footer["text_left"] ?></p>
   <div class="h-full flex justify-between items-center gap-8">
     <?php

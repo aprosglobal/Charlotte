@@ -230,7 +230,7 @@ get_header();
   <div class="md:w-590 w-full mx-auto">
     <h2 class="text-center leading-180%"><?= $section_8["title"] ?></h2>
     <p class="text-center md:text-16 text-13"><?= $section_8["text"] ?></p>
-    <div id="carousel2" class="splide w-full">
+    <div id="carousel2" class="splide w-full md:px-0 px-50">
       <div class="splide__track">
         <ul class="splide__list">
           <?php
@@ -250,7 +250,7 @@ get_header();
   </div>
 </section>
 <!-- ------------------ SECTION 9 ----------------- -->
-<section id="contacto" class="container ">
+<section id="contacto" class="md:container px-60 ">
   <div class="w-full flex md:flex-row flex-col gap-83">
     <div class="md:w-50% w-full">
       <h2><?= $section_9["title_contact"] ?></h2>

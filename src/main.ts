@@ -122,10 +122,29 @@ document.addEventListener("scroll", () => {
   const isAtBottom = scrollTop + clientHeight >= scrollHeight - 5; // Detecta si está al final (con un margen)
 
   if (isAtBottom) {
-    btn_wsp.style.transform = "translateY(-95%)";
+    btn_wsp.style.transform = "translateY(-195%)";
     btn_wsp.style.transition = "transform 0.5s ease";
   } else {
     btn_wsp.style.transform = "translateY(0)";
   }
 });
 // -------------------------------------------------------
+
+const btn_menu_mobile = document.querySelector('.btn-menu-mobile') as HTMLElement;
+const menu_mobile = document.querySelector('.menu-mobile') as HTMLElement;
+const li_menu_mobile = document.querySelectorAll('.ul-menu-mobile li a');
+
+
+btn_menu_mobile.addEventListener('click', function () {
+  menu_mobile.classList.toggle('h-0')
+  menu_mobile.classList.toggle('p-20')
+})
+
+li_menu_mobile.forEach((ancla) => {
+  ancla.addEventListener('click', function () {
+    setTimeout(() => {
+      menu_mobile.classList.toggle('h-0');
+      menu_mobile.classList.toggle('!p-20');
+    }, 300);
+  });
+});
