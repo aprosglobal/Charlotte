@@ -18,21 +18,20 @@ $whatsapp = get_field('whatsapp', 'option');
 get_header();
 ?>
 <!-- ------------ SECTION 1 ----------------- -->
-<section class="mt-86">
-
-  <video src="<?= $section_1["video"] ?>" autoplay loop controls class="w-full"></video>
+<section>
+  <video src="<?= $section_1["video"] ?>" muted autoplay loop class="w-full"></video>
   <div class="bg-rojo py-72">
     <div class="md:w-590 w-full md:px-0 px-66 mx-auto">
-      <h1 class="text-center font-bold font-frank md:text-35 text-20 lei104% "><?= $section_1["title"] ?></h1>
+      <h1 class="text-center font-bold font-frank md:text-35 text-20 leading-104% "><?= $section_1["title"] ?></h1>
 
-      <p class="mt-20 md:text-16 text-13">
+      <p class="mt-20 md:text-16 text-13 mt-80">
         <?= $section_1["text"] ?>
       </p>
     </div>
   </div>
   <div class="relative [&_img]:w-full [&_img]:h-500 [&_img]:object-cover">
     <?= wp_get_attachment_image($section_1['banner'], 'full') ?>
-    <div class="md:p-36 p-29 bg-azul md:w-434 w-244 absolute md:top-118 md:right-226 top-86 right-66">
+    <div class="md:p-36 p-29 bg-azul md:w-434 w-244 absolute md:top-118 md:right-246 top-86 right-86">
       <p class="text-13 text-white italic">
         <?= $section_1["text_banner"] ?>
       </p>
@@ -134,7 +133,7 @@ get_header();
     </div>
 </section>
 <!-- ------------------ SECTION 5 ----------------- -->
-<section class="container my-106">
+<section class="container my-166">
   <div class="flex md:flex-row flex-col h-fit">
     <div
       class="md:w-50% w-full flex  items-center justify-center [&_img]:md:w-435 [&_img]:md:h-305 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
@@ -158,7 +157,7 @@ get_header();
   <div class="w-full overflow-x-hidden">
     <div class="flex justify-center items-center gap-12 mt-60 mb-20">
       <div class="w-22 h-1 bg-cafe"></div>
-      <span class="font-covered md:text-20 text-16 text-white"><?= $section_6["phrase"] ?></span>
+      <span class="font-covered md:text-20 text-16 text-naranja"><?= $section_6["phrase"] ?></span>
       <div class="w-22 h-1 bg-cafe"></div>
     </div>
     <h2 class="text-center text-white mb-60"><?= $section_6["title"] ?></h2>
@@ -175,7 +174,7 @@ get_header();
                   ?>
                   <li class="splide__slide">
                     <div
-                      class="card-linea__item <?= (($idx + 1) % 2 == 1) ? 'impar' : 'par'; ?> [&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200 [&_img]:mx-auto [&_img]:object-cover [&_img]:rounded-full">
+                      class="card-linea__item <?= (($idx + 1) % 2 == 1) ? 'impar' : 'par'; ?> [&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200 [&_img]:mx-auto [&_img]:object-cover ">
 
                       <?= wp_get_attachment_image($time['image'], 'full') ?>
                       <div>
@@ -214,9 +213,9 @@ get_header();
         ?>
         <figure class="[&_img]:w-full [&_img]:h-326 [&_img]:object-cover">
           <?= wp_get_attachment_image($card['image'], 'full') ?>
-          <figcaption class="p-40 bg-plomo3 mt-15">
+          <figcaption class="p-40 md:h-300 bg-plomo3 mt-15">
             <h3 class="text-naranja mb-2rem"><?= $card["title"] ?></h3>
-            <p class="md:text-16 text-13 !text-black"><?= $card["text"] ?></p>
+            <p class="md:!text-16 !text-13 !text-black"><?= $card["text"] ?></p>
           </figcaption>
         </figure>
         <?php
@@ -282,7 +281,7 @@ get_header();
         <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_9["phrase_conoce"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
-      <div class="[&_img]:w-400 [&_img]:h-300 [&_img]:object-cover">
+      <div class="md:[&_img]:w-400 md:[&_img]:h-400 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
         <?= wp_get_attachment_image($section_9['image'], 'full') ?>
       </div>
     </div>
@@ -290,20 +289,22 @@ get_header();
 </section>
 <!-- ------------------ SECTION 10 ----------------- -->
 <section class="w-full mt-90 flex md:flex-row flex-col justify-between gap-18">
-  <div class="md:w-20% w-full [&_img]:w-full [&_img]:h-217 [&_img]:object-cover">
+  <div class="md:!w-20% w-full [&_img]:w-full [&_img]:h-217 [&_img]:object-cover">
     <?= wp_get_attachment_image($section_10['imagen_1'], 'full') ?>
   </div>
-  <div class="md:w-30% w-full [&_img]:w-full [&_img]:h-217 [&_img]:object-cover">
+  <div class="md:!w-30% w-full [&_img]:w-full [&_img]:h-217 [&_img]:object-cover">
     <?= wp_get_attachment_image($section_10['imagen_2'], 'full') ?>
   </div>
 
-  <div class="pt-47 px-54 bg-blue md:w-50% w-full h-217 flex justify-between forma-parte">
+  <div class="pt-47 px-54 bg-blue md:!w-50% w-full h-217 flex justify-between forma-parte">
     <div class="flex flex-col">
-      <span class="font-covered md:text-20 text-16 text-amarillo">Unete al equipo</span>
-      <p class="font-bond text-22 text-white"> FORMA PARTE DE CHARLOTTE</p>
-      <a href="tel:<?= $section_10["phone"] ?>" class="decoration-none mt-26 md:text-16 text-13 font-600 text-white">
+      <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_10["phrase"] ?></span>
+      <p class="font-bond text-22 text-white"><?= $section_10["title"] ?></p>
+      <a href="tel:<?= $section_10["phone"] ?>"
+        class="decoration-none mt-26 md:text-16 text-13 font-600 text-white hover:text-naranja">
         <?= $section_10["phone"] ?></a>
-      <a href="mailto:<?= $section_10["email"] ?>" class="decoration-none md:text-16 text-13 font-600 text-white">
+      <a href="mailto:<?= $section_10["email"] ?>"
+        class="decoration-none md:text-16 text-13 font-600 text-white hover:text-naranja">
         <?= $section_10["email"] ?></a>
     </div>
   </div>

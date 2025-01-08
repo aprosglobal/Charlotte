@@ -21,7 +21,7 @@
         'theme_location' => 'primary',
         'container_class' => "menu-primary-container md:block hidden",
         'container' => 'nav',
-        'menu_class' => "flex gap-20 [&_a]:text-black [&_a]:font-600 [&_a]:text-18 [&_a]:font-oswald, hover:[&_a]:text-naranja",
+        'menu_class' => "flex gap-20 [&_a]:text-black [&_a]:font-oswald [&_a]:font-600 [&_a]:text-18 hover:[&_a]:text-naranja",
       )
     );
     ?>
@@ -37,7 +37,7 @@
             'theme_location' => 'primary',
             'container_class' => "menu-primary-container",
             'container' => 'nav',
-            'menu_class' => "[&_a]:text-mostaza [&_a]:font-600 [&_a]:text-16 [&_a]:font-oswald, hover:[&_a]:text-naranja ul-menu-mobile",
+            'menu_class' => "[&_a]:text-mostaza [&_a]:font-oswald [&_a]:font-600 [&_a]:text-16  hover:[&_a]:text-naranja ul-menu-mobile",
           )
         );
         ?>
