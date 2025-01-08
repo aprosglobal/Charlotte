@@ -122,7 +122,7 @@ document.addEventListener("scroll", () => {
   const isAtBottom = scrollTop + clientHeight >= scrollHeight - 5; // Detecta si está al final (con un margen)
 
   if (isAtBottom) {
-    btn_wsp.style.transform = "translateY(-195%)";
+    btn_wsp.style.transform = "translateY(-95%)";
     btn_wsp.style.transition = "transform 0.5s ease";
   } else {
     btn_wsp.style.transform = "translateY(0)";
