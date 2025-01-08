@@ -20,7 +20,7 @@ get_header();
 <!-- ------------ SECTION 1 ----------------- -->
 <section class="mt-86">
 
-  <video src="<?= $section_1["video"] ?>" loop controls class="w-full"></video>
+  <video src="<?= $section_1["video"] ?>" autoplay loop controls class="w-full"></video>
   <div class="bg-rojo py-72">
     <div class="md:w-590 w-full md:px-0 px-66 mx-auto">
       <h1 class="text-center font-bold font-frank md:text-35 text-20 lei104% "><?= $section_1["title"] ?></h1>
