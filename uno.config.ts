@@ -63,7 +63,7 @@ export default defineConfig({
     container: {
       center: true,
       padding: {
-        xs: calc(66),
+        xs: calc(25),
         md: calc(233),
       },
       maxWidth: {
