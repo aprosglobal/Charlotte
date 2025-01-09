@@ -30,14 +30,14 @@
         <div style="background-image:url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2025/01/elipsis.png')"
           class="w-20 h-20 bg-contain bg-norepet"></div>
       </div>
-      <div class="absolute top-50 right-0 bg-crema w-auto menu-mobile h-0 overflow-hidden transition-all">
+      <div class="absolute top-50 right-0 bg-naranja w-auto menu-mobile h-0 overflow-hidden transition-all">
         <?php
         wp_nav_menu(
           array(
             'theme_location' => 'primary',
             'container_class' => "menu-primary-container",
             'container' => 'nav',
-            'menu_class' => "[&_a]:text-mostaza [&_a]:font-oswald [&_a]:font-600 [&_a]:text-16  hover:[&_a]:text-naranja ul-menu-mobile",
+            'menu_class' => "[&_a]:text-white [&_a]:font-oswald [&_a]:font-600 [&_a]:text-20  hover:[&_a]:text-naranja ul-menu-mobile",
           )
         );
         ?>
