@@ -52,6 +52,7 @@ export default defineConfig({
       plomo3: "#F3F3F2",
       crema: "#ffe29c",
       mostaza: "#efc44b",
+      negro_light: "#3E3E3E",
     },
     fontFamily: {
       oswald: ["Oswald", "sans-serif"],
