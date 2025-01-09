@@ -170,9 +170,9 @@ get_header();
 <section class="bg-azul pb-120">
   <div class="w-full overflow-x-hidden">
     <div class="flex justify-center items-center gap-12 mt-60 mb-20">
-      <div class="w-22 h-1 bg-cafe"></div>
+      <div class="w-22 h-1 bg-naranja"></div>
       <span class="font-covered md:text-20 text-16 text-naranja"><?= $section_6["phrase"] ?></span>
-      <div class="w-22 h-1 bg-cafe"></div>
+      <div class="w-22 h-1 bg-naranja"></div>
     </div>
     <h2 class="text-center text-white mb-60"><?= $section_6["title"] ?></h2>
 
