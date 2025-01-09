@@ -21,10 +21,14 @@ get_header();
 <section>
   <video src="<?= $section_1["video"] ?>" muted autoplay loop class="w-full"></video>
   <div class="bg-rojo py-72">
-    <div class="md:w-590 w-full md:px-0 px-66 mx-auto">
+    <div class="md:w-900 w-full md:px-0 px-66 mx-auto">
       <h1 class="text-center font-bold font-frank md:text-35 text-20 leading-104% "><?= $section_1["title"] ?></h1>
-
-      <p class="mt-20 md:text-16 text-13 mt-80">
+      <div class="flex justify-center items-center gap-12 my-40">
+        <div class="w-22 h-1 bg-amarillo"></div>
+        <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_1["phrase"] ?></span>
+        <div class="w-22 h-1 bg-amarillo"></div>
+      </div>
+      <p class="mt-20 md:text-16 text-13 text-center">
         <?= $section_1["text"] ?>
       </p>
     </div>
@@ -42,12 +46,12 @@ get_header();
 <section id="servicios" class="mt-107">
   <div class="md:container">
     <h2 class="text-center md:px-0 px-66"><?= $section_2["title"] ?></h2>
-    <div class="flex justify-center items-center gap-12 mt-55">
+    <div class="flex justify-center items-center gap-12 md:mt-55 mt-40">
       <div class="w-22 h-1 bg-amarillo"></div>
       <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_2["phrase"] ?></span>
       <div class="w-22 h-1 bg-amarillo"></div>
     </div>
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-20 mt-78">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-20 md:mt-78 mt-50">
 
       <?php
       if ($section_2["servicios"]):
@@ -57,8 +61,8 @@ get_header();
             class="relative md:w-433 md:h-325 w-full h-auto group [&_img]:w-full [&_img]:h-full [&_img]:object-cover overflow-hidden">
             <?= wp_get_attachment_image($servicio['image'], 'full') ?>
             <figcaption
-              class="absolute z-10 md:top-230 top-145 left-0 md:w-433 w-full h-full md:p-40 px-36 py-18 bg-black/30 duration-300 group-hover:top-0 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-start group-hover:justify-end transition-all">
-              <h3 class="text-naranja mb-2rem" style="text-shadow: #FC0 1px 0 10px;"><?= $servicio["title"] ?></h3>
+              class="absolute z-10 md:top-230 top-145 left-0 md:w-433 w-full h-full md:p-40 px-36 py-18 bg-transparent duration-300 group-hover:top-0 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-start group-hover:justify-end transition-all">
+              <h3 class="text-naranja mb-2rem"><?= $servicio["title"] ?></h3>
               <p class="md:text-16 text-13 text-white"><?= $servicio["text"] ?>
               </p>
             </figcaption>
@@ -94,7 +98,7 @@ get_header();
   <div class="flex md:flex-row flex-col gap-100">
     <div class="md:w-50% w-full">
       <h2><?= $section_3["title"] ?></h2>
-      <div class="flex justify-start items-center gap-12 my-53">
+      <div class="flex justify-start items-center gap-12 md:my-53 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
         <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_3["phrase"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
@@ -122,9 +126,19 @@ get_header();
   <div class="flex md:flex-row flex-col bg-naranja ">
     <div class="md:w-50% w-full grid items-center md:pl-233 pl-68 md:pr-60 pr-18 md:py-0 py-39">
       <div>
+        <div class="flex justify-start items-center gap-12 my-20">
+          <div class="w-22 h-1 bg-negro_light"></div>
+          <span class="font-covered md:text-20 text-16 text-negro_light">Nutriendo con calidad y tradición</span>
+          <div class="w-22 h-1 bg-negro_light"></div>
+        </div>
         <h2 class="MyV relative inline-block text-white"><?= $section_4["mision_title"] ?></h2>
         <p class="md:text-16 text-13 text-white"><?= $section_4["mision_text"] ?></p>
-        <h2 class="MyV2 relative inline-block text-white mt-20"><?= $section_4["vision_title"] ?></h2>
+        <div class="flex justify-start items-center gap-12 my-20">
+          <div class="w-22 h-1 bg-negro_light"></div>
+          <span class="font-covered md:text-20 text-16 text-negro_light">innovando para un futuro saludable</span>
+          <div class="w-22 h-1 bg-negro_light"></div>
+        </div>
+        <h2 class="MyV2 relative inline-block text-white"><?= $section_4["vision_title"] ?></h2>
         <p class="md:text-16 text-13 text-white"><?= $section_4["vision_text"] ?></p>
       </div>
     </div>
@@ -133,16 +147,16 @@ get_header();
     </div>
 </section>
 <!-- ------------------ SECTION 5 ----------------- -->
-<section class="container my-166">
-  <div class="flex md:flex-row flex-col h-fit">
+<section class="md:mx-133 my-166">
+  <div class="flex md:gap-50 gap-35 md:flex-row flex-col h-fit">
     <div
-      class="md:w-50% w-full flex  items-center justify-center [&_img]:md:w-435 [&_img]:md:h-305 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
+      class="md:w-50% w-full flex  items-center justify-center [&_img]:md:w-full [&_img]:md:h-350 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
       <?= wp_get_attachment_image($section_5['image'], 'full') ?>
     </div>
-    <div class="md:w-50% w-full items-center">
+    <div class="md:w-50% w-full flex items-center">
       <div>
         <h2 class="text-center"><?= $section_5["title"] ?></h2>
-        <div class="flex justify-center items-center gap-12 my-43">
+        <div class="flex justify-center items-center gap-12 md:my-35 my-30">
           <div class="w-22 h-1 bg-amarillo"></div>
           <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_5["phrase"] ?></span>
           <div class="w-22 h-1 bg-amarillo"></div>
@@ -201,7 +215,7 @@ get_header();
 <!-- ------------------ SECTION 7 ----------------- -->
 <section id="calidad" class="container mt-104">
   <h2 class="text-center font-bold"><?= $section_7["title"] ?></h2>
-  <div class="flex justify-center items-center gap-12 my-47">
+  <div class="flex justify-center items-center gap-12 md:my-47 my-40">
     <div class="w-22 h-1 bg-amarillo"></div>
     <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_7["phrase"] ?></span>
     <div class="w-22 h-1 bg-amarillo"></div>
@@ -213,7 +227,7 @@ get_header();
         ?>
         <figure class="[&_img]:w-full [&_img]:h-326 [&_img]:object-cover">
           <?= wp_get_attachment_image($card['image'], 'full') ?>
-          <figcaption class="p-40 md:h-300 bg-plomo3 mt-15">
+          <figcaption class="p-40 md:h-350 bg-plomo3 mt-15">
             <h3 class="text-naranja mb-2rem"><?= $card["title"] ?></h3>
             <p class="md:!text-16 !text-13 !text-black"><?= $card["text"] ?></p>
           </figcaption>
@@ -228,7 +242,7 @@ get_header();
 <section class="my-108 py-50 bg-rojo">
   <div class="md:w-590 w-full mx-auto">
     <h2 class="text-center leading-180%"><?= $section_8["title"] ?></h2>
-    <p class="text-center md:text-16 text-13"><?= $section_8["text"] ?></p>
+    <p class="text-center md:text-16 text-13 md:mx-0 mx-15"><?= $section_8["text"] ?></p>
     <div id="carousel2" class="splide w-full md:px-0 px-50">
       <div class="splide__track">
         <ul class="splide__list">
