@@ -36,7 +36,7 @@ get_header();
   <div class="relative [&_img]:w-full [&_img]:h-500 [&_img]:object-cover">
     <?= wp_get_attachment_image($section_1['banner'], 'full') ?>
     <div class="md:p-36 p-29 bg-azul md:w-434 w-244 absolute md:top-118 md:right-246 top-86 right-86">
-      <p class="text-13 text-white italic">
+      <p class="text-15 text-white italic">
         <?= $section_1["text_banner"] ?>
       </p>
     </div>
@@ -57,7 +57,7 @@ get_header();
       if ($section_2["servicios"]):
         foreach ($section_2["servicios"] as $servicio):
           ?>
-          <figure
+          <!-- <figure
             class="relative md:w-433 md:h-325 w-full h-auto group [&_img]:w-full [&_img]:h-full [&_img]:object-cover overflow-hidden">
             <?= wp_get_attachment_image($servicio['image'], 'full') ?>
             <figcaption
@@ -66,13 +66,20 @@ get_header();
               <p class="md:text-16 text-13 text-white"><?= $servicio["text"] ?>
               </p>
             </figcaption>
+          </figure> -->
+          <figure class="[&_img]:w-full [&_img]:h-326 [&_img]:object-cover">
+            <?= wp_get_attachment_image($servicio['image'], 'full') ?>
+            <figcaption class="p-35 md:h-260 bg-plomo3 ">
+              <h3 class="text-naranja mb-20"><?= $servicio["title"] ?></h3>
+              <p class="md:!text-16 !text-13 !text-black"><?= $servicio["text"] ?></p>
+            </figcaption>
           </figure>
           <?php
         endforeach;
       endif; ?>
     </div>
   </div>
-  <div class="px-80 mt-90 md:px-313 bg-rojo">
+  <div class="px-80 mt-90 md:px-313 xl:px-28% ">
     <div id="carousel" class="splide w-full">
       <div class="splide__track">
         <ul class="splide__list">
@@ -112,7 +119,7 @@ get_header();
       <figure class="h-full flex flex-col gap-30 justify-center [&_img]:h-422 [&_img]:w-full [&_img]:object-cover">
         <?= wp_get_attachment_image($section_3['image'], 'full') ?>
         <figcaption class="bg-azul text-white mt-20 w-full h-auto p-34">
-          <p class="text-15 italic">
+          <p class="text-15 italic text-white">
             <?= $section_3["text_image"] ?>
           </p>
         </figcaption>
@@ -124,16 +131,16 @@ get_header();
 <!-- ------------------ SECTION 4 ----------------- -->
 <section class="mt-93">
   <div class="flex md:flex-row flex-col bg-naranja ">
-    <div class="md:w-50% w-full grid items-center md:pl-233 pl-68 md:pr-60 pr-18 md:py-0 py-39">
+    <div class="md:w-50% w-full grid items-center md:pl-233 pl-68 md:pr-60 pr-18 py-40">
       <div>
-        <div class="flex justify-start items-center gap-12 mt-20">
+        <div class="flex justify-start items-center gap-12 mb-15">
           <div class="w-22 h-1 bg-negro_light"></div>
           <span class="font-covered md:text-20 text-16 text-negro_light"><?= $section_4["mision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
         </div>
         <h2 class="MyV relative inline-block text-white"><?= $section_4["mision_title"] ?></h2>
         <p class="md:text-16 text-13 text-white mt-20"><?= $section_4["mision_text"] ?></p>
-        <div class="flex justify-start items-center gap-12 mt-20">
+        <div class="flex justify-start items-center gap-12 my-15">
           <div class="w-22 h-1 bg-negro_light"></div>
           <span class="font-covered md:text-20 text-16 text-negro_light"><?= $section_4["vision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
@@ -142,13 +149,13 @@ get_header();
         <p class="md:text-16 text-13 text-white mt-20"><?= $section_4["vision_text"] ?></p>
       </div>
     </div>
-    <div class="md:w-50% w-full [&_img]:w-full [&_img]:h-523 [&_img]:object-cover">
+    <div class="md:w-50% w-full [&_img]:w-full md:[&_img]:h-550 [&_img]:h-523 [&_img]:object-cover">
       <?= wp_get_attachment_image($section_4['image'], 'full') ?>
     </div>
 </section>
 <!-- ------------------ SECTION 5 ----------------- -->
-<section class="md:mx-133 my-166">
-  <div class="flex md:gap-50 gap-35 md:flex-row flex-col h-fit">
+<section class="my-166">
+  <div class="md:w-1098 flex md:gap-50 gap-35 md:flex-row flex-col h-fit mx-auto">
     <div
       class="md:w-50% w-full flex  items-center justify-center [&_img]:md:w-full [&_img]:md:h-350 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
       <?= wp_get_attachment_image($section_5['image'], 'full') ?>
@@ -170,9 +177,9 @@ get_header();
 <section class="bg-azul pb-120">
   <div class="w-full overflow-x-hidden">
     <div class="flex justify-center items-center gap-12 mt-60 mb-20">
-      <div class="w-22 h-1 bg-naranja"></div>
-      <span class="font-covered md:text-20 text-16 text-naranja"><?= $section_6["phrase"] ?></span>
-      <div class="w-22 h-1 bg-naranja"></div>
+      <div class="w-22 h-1 bg-amarillo"></div>
+      <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_6["phrase"] ?></span>
+      <div class="w-22 h-1 bg-amarillo"></div>
     </div>
     <h2 class="text-center text-white mb-60"><?= $section_6["title"] ?></h2>
 
@@ -192,10 +199,11 @@ get_header();
 
                       <?= wp_get_attachment_image($time['image'], 'full') ?>
                       <div>
-                        <div class="text-25 md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
+                        <div
+                          class="text-25 text-white md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
                           <?= $time["year"] ?>
                         </div>
-                        <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202">
+                        <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202 text-white">
                           <?= $time["text"] ?>
                         </div>
                       </div>
@@ -227,8 +235,8 @@ get_header();
         ?>
         <figure class="[&_img]:w-full [&_img]:h-326 [&_img]:object-cover">
           <?= wp_get_attachment_image($card['image'], 'full') ?>
-          <figcaption class="p-40 md:h-350 bg-plomo3 mt-15">
-            <h3 class="text-naranja mb-2rem"><?= $card["title"] ?></h3>
+          <figcaption class="p-35 md:h-285 bg-plomo3 ">
+            <h3 class="text-naranja mb-20"><?= $card["title"] ?></h3>
             <p class="md:!text-16 !text-13 !text-black"><?= $card["text"] ?></p>
           </figcaption>
         </figure>
@@ -241,16 +249,16 @@ get_header();
 <!-- ------------------ SECTION 8 ----------------- -->
 <section class="my-108 py-50 bg-rojo">
   <div class="md:w-590 w-full mx-auto">
-    <h2 class="text-center leading-180%"><?= $section_8["title"] ?></h2>
-    <p class="text-center md:text-16 text-13 md:mx-0 mx-15"><?= $section_8["text"] ?></p>
-    <div id="carousel2" class="splide w-full md:px-0 px-50">
+    <h2 class="text-center leading-104% text-naranja"><?= $section_8["title"] ?></h2>
+    <p class="text-center md:text-16 text-13 md:mx-0 mx-15 mt-20"><?= $section_8["text"] ?></p>
+    <div id="carousel2" class="splide w-full md:px-0 px-50 mt-20">
       <div class="splide__track">
         <ul class="splide__list">
           <?php
           if ($section_8["logos"]):
             foreach ($section_8["logos"] as $logo):
               ?>
-              <li class="splide__slide [&_img]:w-180 [&_img]:h-200 [&_img]:object-contain">
+              <li class="splide__slide [&_img]:w-180 [&_img]:h-auto [&_img]:object-contain">
                 <?= wp_get_attachment_image($logo['image'], 'full') ?>
               </li>
               <?php
@@ -285,7 +293,7 @@ get_header();
           required>
         <textarea name="" id="" cols="30" rows="5" placeholder="Mensaje"
           class="col-span-2 pl-15 pt-10 !border-amarillo !rounded-8 !bg-transparent"></textarea>
-        <button class="w-121 h-43 rounded-8 bg-naranja/40 hover:bg-naranja text-white font-bold text-16">ENVIAR</button>
+        <button class="w-121 h-43 rounded-8 bg-naranja hover:bg-cafe2 text-white font-bold text-16">ENVIAR</button>
       </div>
     </div>
     <div class="md:w-50% w-full">
@@ -295,7 +303,7 @@ get_header();
         <span class="font-covered md:text-20 text-16 text-amarillo"><?= $section_9["phrase_conoce"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
-      <div class="md:[&_img]:w-400 md:[&_img]:h-400 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
+      <div class="md:[&_img]:h-400 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
         <?= wp_get_attachment_image($section_9['image'], 'full') ?>
       </div>
     </div>
