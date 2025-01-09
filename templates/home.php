@@ -126,20 +126,20 @@ get_header();
   <div class="flex md:flex-row flex-col bg-naranja ">
     <div class="md:w-50% w-full grid items-center md:pl-233 pl-68 md:pr-60 pr-18 md:py-0 py-39">
       <div>
-        <div class="flex justify-start items-center gap-12 my-20">
+        <div class="flex justify-start items-center gap-12 mt-20">
           <div class="w-22 h-1 bg-negro_light"></div>
-          <span class="font-covered md:text-20 text-16 text-negro_light">Nutriendo con calidad y tradición</span>
+          <span class="font-covered md:text-20 text-16 text-negro_light"><?= $section_4["mision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
         </div>
         <h2 class="MyV relative inline-block text-white"><?= $section_4["mision_title"] ?></h2>
-        <p class="md:text-16 text-13 text-white"><?= $section_4["mision_text"] ?></p>
-        <div class="flex justify-start items-center gap-12 my-20">
+        <p class="md:text-16 text-13 text-white mt-20"><?= $section_4["mision_text"] ?></p>
+        <div class="flex justify-start items-center gap-12 mt-20">
           <div class="w-22 h-1 bg-negro_light"></div>
-          <span class="font-covered md:text-20 text-16 text-negro_light">innovando para un futuro saludable</span>
+          <span class="font-covered md:text-20 text-16 text-negro_light"><?= $section_4["vision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
         </div>
         <h2 class="MyV2 relative inline-block text-white"><?= $section_4["vision_title"] ?></h2>
-        <p class="md:text-16 text-13 text-white"><?= $section_4["vision_text"] ?></p>
+        <p class="md:text-16 text-13 text-white mt-20"><?= $section_4["vision_text"] ?></p>
       </div>
     </div>
     <div class="md:w-50% w-full [&_img]:w-full [&_img]:h-523 [&_img]:object-cover">
@@ -188,7 +188,7 @@ get_header();
                   ?>
                   <li class="splide__slide">
                     <div
-                      class="card-linea__item <?= (($idx + 1) % 2 == 1) ? 'impar' : 'par'; ?> [&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200 [&_img]:mx-auto [&_img]:object-cover ">
+                      class="card-linea__item <?= (($idx + 1) % 2 == 1) ? 'impar' : 'par'; ?> [&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200 [&_img]:mx-auto [&_img]:object-cover [&_img]:rounded-full">
 
                       <?= wp_get_attachment_image($time['image'], 'full') ?>
                       <div>
