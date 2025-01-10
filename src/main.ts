@@ -217,6 +217,13 @@ if (btnsendform) {
         thanks_message.classList.remove('hidden');
         thanks_message.classList.add('block');
         thanks_message.innerHTML = mensaje.innerHTML;
+        // Obtener estilos aplicados a 'mensaje' y aplicarlos a 'thanks_message'
+        const mensajeStyles = window.getComputedStyle(mensaje);
+        const keysToCopy = ['border-color', 'border', 'padding']; // Lista de estilos que quieres copiar
+
+        keysToCopy.forEach((key) => {
+          (thanks_message.style as any)[key] = mensajeStyles.getPropertyValue(key);
+        });
         realizarOtraAccion();
       }, 1300);
 
