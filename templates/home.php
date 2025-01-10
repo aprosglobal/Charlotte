@@ -286,16 +286,50 @@ get_header();
       <p><b>Escríbenos:</b><a href="<?= $section_9["email"] ?>" class="decoration-none"><?= $section_9["email"] ?></a>
       </p>
       <p><b>Ó déjanos tus datos y te contáctamos:</b></p>
-      <div class="grid grid-cols-2 gap-10 mt-29">
-        <input type="text" placeholder="Nombre*" class="!border-amarillo !rounded-8 !bg-transparent" required>
-        <input type="text" placeholder="Compañia*" class="!border-amarillo !rounded-8 !bg-transparent" required>
-        <input type="tel" placeholder="Telefono*" class="!border-amarillo !rounded-8 !bg-transparent" required>
-        <input type="email" placeholder="Correo electronico*" class="!border-amarillo !rounded-8 !bg-transparent"
-          required>
-        <textarea name="" id="" cols="30" rows="5" placeholder="Mensaje"
-          class="col-span-2 pl-15 pt-10 !border-amarillo !rounded-8 !bg-transparent"></textarea>
-        <button class="w-121 h-43 rounded-8 bg-naranja hover:bg-cafe2 text-white font-bold text-16">ENVIAR</button>
-      </div>
+      <?php if ($section_9["contact_form"]): ?>
+        <div class="grid grid-cols-2 gap-10 mt-29">
+          <div class="relative">
+            <input type="text" placeholder="Nombre*" id="nombre-form" minlength="12" maxlength="45"
+              class="!border-amarillo !rounded-8 !bg-transparent w-full"
+              oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '') ;" required>
+            <span class="font-400 text-12 leading-126% text-red vali-ipt-nombre absolute right-50 top-30 hidden ">Ingrese
+              su nombre</span>
+          </div>
+          <div class="relative">
+            <input type="text" placeholder="Compañia*" id="compania-form" minlength="12" maxlength="45"
+              class="!border-amarillo !rounded-8 !bg-transparent w-full"
+              oninput="this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, '') ;" required>
+            <span
+              class="font-400 text-12 leading-126% text-red vali-ipt-compania absolute right-50 top-30 hidden ">Ingrese
+              el nombre de la compañia</span>
+          </div>
+          <div class="relative">
+            <input type="tel" placeholder="Celular*" id="celular-form" minlength="9" maxlength="9"
+              class="!border-amarillo !rounded-8 !bg-transparent w-full"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
+            <span class="font-400 text-12 leading-126% text-red vali-ipt-celular absolute right-50 top-30 hidden ">Ingrese
+              su número celular</span>
+          </div>
+          <div class="relative">
+            <input type="email" placeholder="Correo electronico*" id="correo-form" minlength="12" maxlength="45"
+              class="!border-amarillo !rounded-8 !bg-transparent w-full" required>
+            <span class="font-400 text-12 leading-126% text-red vali-ipt-correo absolute right-50 top-30 hidden ">Ingrese
+              su correo electronico</span>
+          </div>
+          <textarea name="" id="mensaje-form" cols="30" rows="5" placeholder="Mensaje"
+            class="col-span-2 pl-15 pt-10 !border-amarillo !rounded-8 !bg-transparent"></textarea>
+          <button id="btnsendform"
+            class="w-121 h-43 rounded-8 bg-naranja hover:bg-cafe2 focus:bg-cafe2 text-white font-bold text-16">ENVIAR</button>
+        </div>
+        <div class="w-full h-auto justify-center items-center  gap-24 mx-auto p-32 hidden thanks-message">
+          <div>
+            <h3 class="font-700 text-32 leading-104%">¡Hemos recibido tus datos!</h3>
+          </div>
+        </div>
+        <div class="hidden">
+          <?= do_shortcode($section_9["contact_form"]) ?>
+        </div>
+      <?php endif; ?>
     </div>
     <div class="md:w-50% w-full">
       <h2 class="md:text-left text-center"><?= $section_9["title_conoce"] ?></h2>
