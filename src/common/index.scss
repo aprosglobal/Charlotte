@@ -1,0 +1,61 @@
+* {
+  @apply font-frank font-400 text-negro_light;
+}
+
+
+body {
+  background-color: white;
+}
+
+h2 {
+  @apply md:text-35 text-25 leading-104% font-bold font-frank;
+}
+
+h3 {
+  @apply md:text-24 text-18 leading-104% font-bold font-frank;
+  ;
+}
+
+// --------------- HEADER --------------------
+#menu-menu-principal li:last-child {
+  @apply rounded-full px-15 bg-naranja hover:bg-cafe2 h-35 flex justify-center items-center;
+
+  a {
+    @apply text-white;
+  }
+}
+
+.borde-header {
+  @apply border-b-1 border-b-solid border-b-gray shadow-lg;
+}
+
+#menu-menu-principal li {
+  @apply flex items-center;
+}
+
+#menu-menu-principal li:nth-child(4) {
+  @apply ml-24;
+
+  a {
+    @apply relative;
+  }
+
+}
+
+#menu-menu-principal li:nth-child(4) a::before {
+  content: '';
+  @apply w-20 h-20 block absolute top-50% left--6;
+  background-image: url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2024/09/colegio4x.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: translateY(-50%);
+}
+
+#menu-menu-principal li:nth-child(4) a:hover::before {
+  background-image: url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2025/01/colegio.png');
+}
+
+
+// ------------------------------------------------
