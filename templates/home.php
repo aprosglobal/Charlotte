@@ -45,7 +45,7 @@ get_header();
 </section>
 <!-- ------------ SECTION 2 ----------------- -->
 <section id="servicios" class="pt-108">
-  <div class="md:container">
+  <div class="container">
     <h2 class="text-center md:px-0 px-66"><?= $section_2["title"] ?></h2>
     <div class="flex justify-center items-center gap-12 md:mt-55 mt-40">
       <div class="w-22 h-1 bg-amarillo"></div>
@@ -80,7 +80,7 @@ get_header();
       endif; ?>
     </div>
   </div>
-  <div class="px-80 mt-90 md:px-313 xl:px-28% ">
+  <div class="px-50 mt-90 md:px-313 xl:px-28% ">
     <div id="carousel" class="splide w-full">
       <div class="splide__track">
         <ul class="splide__list">
@@ -105,8 +105,8 @@ get_header();
 <section id="nosotros" class="container pt-110">
   <div class="flex md:flex-row flex-col gap-100">
     <div class="md:w-50% w-full">
-      <h2><?= $section_3["title"] ?></h2>
-      <div class="flex justify-start items-center gap-12 md:my-53 my-40">
+      <h2 class="md:text-left text-center"><?= $section_3["title"] ?></h2>
+      <div class="flex md:justify-start justify-center items-center gap-12 md:my-53 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
         <span class="font-covered text-20 text-amarillo"><?= $section_3["phrase"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
@@ -319,7 +319,7 @@ get_header();
     <?= wp_get_attachment_image($section_10['imagen_2'], 'full') ?>
   </div>
 
-  <div class="pt-47 px-54 bg-blue md:!w-50% w-full h-217 flex justify-between forma-parte">
+  <div class="py-47 px-54 bg-blue md:!w-50% w-full md:h-217 h-auto flex justify-between forma-parte">
     <div class="flex flex-col">
       <span class="font-covered text-20 text-amarillo"><?= $section_10["phrase"] ?></span>
       <p class="font-bond text-25 text-white"><?= $section_10["title"] ?></p>
