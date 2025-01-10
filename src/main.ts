@@ -136,6 +136,10 @@ if (btnsendform) {
       document.querySelector('.vali-ipt-nombre')?.classList.remove('hidden');
       document.querySelector('.vali-ipt-nombre')!.textContent = 'Ingrese solo letras.';
       mistakes.push('error_nombre');
+    } else if (name.value.length < 12) {
+      document.querySelector('.vali-ipt-nombre')?.classList.remove('hidden');
+      document.querySelector('.vali-ipt-nombre')!.textContent = 'Ingrese su nombre y apellidos';
+      mistakes.push('error_nombre');
     } else {
       document.querySelector('.vali-ipt-nombre')?.classList.add('hidden');
       mistakes = mistakes.filter(error => error !== 'error_nombre');
@@ -148,6 +152,11 @@ if (btnsendform) {
       document.querySelector('.vali-ipt-compania')?.classList.remove('hidden');
       document.querySelector('.vali-ipt-compania')!.textContent = 'Ingrese solo letras y numeros';
       mistakes.push('error_compania');
+    } else if (compania.value.length < 12) {
+      document.querySelector('.vali-ipt-compania')?.classList.remove('hidden');
+      document.querySelector('.vali-ipt-compania')!.textContent = 'El nombre es muy corto debe de ser mayor a 12 caracteres';
+      mistakes.push('error_compania');
+
     } else {
       document.querySelector('.vali-ipt-compania')?.classList.add('hidden');
       mistakes = mistakes.filter(error => error !== 'error_compania');
@@ -202,13 +211,21 @@ if (btnsendform) {
       // @ts-ignore
       submitButton.click();
 
-      // suscribe_tap2.classList.add('hidden');
-      thanks_message.classList.remove('hidden');
-      thanks_message.classList.add('flex');
+      // msj after send mail
       setTimeout(() => {
-        thanks_message.classList.remove('flex');
-        thanks_message.classList.add('hidden');
+        const mensaje = document.querySelector('.wpcf7-response-output') as HTMLElement;
+        thanks_message.classList.remove('hidden');
+        thanks_message.classList.add('block');
+        thanks_message.innerHTML = mensaje.innerHTML;
+        realizarOtraAccion();
       }, 1300);
+
+      function realizarOtraAccion() {
+        setTimeout(() => {
+          thanks_message.classList.remove('block');
+          thanks_message.classList.add('hidden');
+        }, 1000);
+      }
 
 
       name.value = '';

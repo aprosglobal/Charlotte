@@ -321,10 +321,8 @@ get_header();
           <button id="btnsendform"
             class="w-121 h-43 rounded-8 bg-naranja hover:bg-cafe2 focus:bg-cafe2 text-white font-bold text-16">ENVIAR</button>
         </div>
-        <div class="w-full h-auto justify-center items-center  gap-24 mx-auto p-32 hidden thanks-message">
-          <div>
-            <h3 class="font-700 text-32 leading-104%">¡Hemos recibido tus datos!</h3>
-          </div>
+        <div
+          class="w-full h-auto justify-center items-center gap-24 mx-auto mt-20 p-10 hidden thanks-message border-1 border-solid border-black">
         </div>
         <div class="hidden">
           <?= do_shortcode($section_9["contact_form"]) ?>
