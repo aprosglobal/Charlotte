@@ -1,0 +1,22 @@
+.grilla {
+  @apply grid grid-cols-2 gap-30;
+
+  input,
+  select {
+    @apply border-amarillo rounded-8 bg-transparent w-full h-46 text-negro_light;
+  }
+}
+
+.area-texto {
+  textarea {
+    @apply border-amarillo rounded-8 bg-transparent w-full text-negro_light;
+  }
+}
+
+.boton-send-form-concesionario {
+  @apply mt-20;
+
+  input {
+    @apply rounded-8 bg-naranja hover:bg-cafe2 focus:bg-cafe2 text-white font-bold text-16;
+  }
+}
