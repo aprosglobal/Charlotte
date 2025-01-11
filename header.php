@@ -16,6 +16,9 @@ $activo = false;
 if (strpos($currentUrl, 'concesionarios') !== false) {
   // Ejecuta el código si "concesionarios" está presente en la URL
   $activo = true;
+} elseif (strpos($currentUrl, 'libro-de-reclamaciones') !== false) {
+  // Ejecuta el código si "concesionarios" está presente en la URL
+  $activo = true;
 } else {
   // Ejecuta el código si "concesionarios" no está presente en la URL
   $activo = false;
