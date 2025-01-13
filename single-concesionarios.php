@@ -1,4 +1,5 @@
 <?php
+$form = get_field('form');
 get_header();
 ?>
 <section class="container mt-86">
@@ -16,7 +17,7 @@ get_header();
       efectivo para hacernos llegar tus mensajes.</p>
   </div>
   <div class=" mx-auto mt-50 mb-89">
-    <?= do_shortcode('[contact-form-7 id="8114a48" title="Consesionarios"]') ?>
+    <?= do_shortcode($form) ?>
   </div>
 </section>
 

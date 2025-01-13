@@ -17,6 +17,6 @@
   @apply mt-20;
 
   input {
-    @apply rounded-8 bg-naranja hover:bg-cafe2 focus:bg-cafe2 text-white font-bold text-16;
+    @apply rounded-8 bg-naranja hover:bg-cafe2 focus:bg-cafe2 !text-white font-bold text-16;
   }
 }
