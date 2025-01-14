@@ -39,7 +39,8 @@
     "vite-plugin-full-reload": "^1.1.0"
   },
   "dependencies": {
-    "@splidejs/splide": "^4.1.4"
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3"
   },
   "release-it": {
     "git": {

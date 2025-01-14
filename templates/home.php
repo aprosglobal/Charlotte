@@ -58,16 +58,6 @@ get_header();
       if ($section_2["servicios"]):
         foreach ($section_2["servicios"] as $servicio):
           ?>
-          <!-- <figure
-            class="relative md:w-433 md:h-325 w-full h-auto group [&_img]:w-full [&_img]:h-full [&_img]:object-cover overflow-hidden">
-            <?= wp_get_attachment_image($servicio['image'], 'full') ?>
-            <figcaption
-              class="absolute z-10 md:top-230 top-145 left-0 md:w-433 w-full h-full md:p-40 px-36 py-18 bg-transparent duration-300 group-hover:top-0 group-hover:h-full group-hover:bg-black/50 flex flex-col justify-start group-hover:justify-end transition-all">
-              <h3 class="text-naranja mb-2rem"><?= $servicio["title"] ?></h3>
-              <p class="md:text-16 text-13 text-white"><?= $servicio["text"] ?>
-              </p>
-            </figcaption>
-          </figure> -->
           <figure class="[&_img]:w-full [&_img]:h-326 [&_img]:object-cover">
             <?= wp_get_attachment_image($servicio['image'], 'full') ?>
             <figcaption class="p-35 md:h-260 bg-plomo3 ">
