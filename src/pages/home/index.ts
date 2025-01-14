@@ -1,5 +1,6 @@
 import Splide from "@splidejs/splide"
 import "@splidejs/splide/css";
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 // -------------- SECTION 2 -------------------------
 
@@ -7,16 +8,15 @@ const carousel = document.querySelector("#carousel") as HTMLElement;
 const slides = document.querySelectorAll("#carousel .splide__slide");
 if (carousel) {
   const splide = new Splide(carousel, {
-    type: "slide",
-    rewind: true,
-    speed: 1000,
+    type: "loop",
+    speed: 700,
     pagination: false,
     arrows: (slides.length >= 5) ? true : false,
     drag: (slides.length >= 5) ? true : false,
     perPage: 4,
     gap: "10px",
   });
-  splide.mount();
+  splide.mount({ AutoScroll });
 }
 
 // ------------------------------------------------------

@@ -12,35 +12,35 @@
 
 // --------------------- SECTION 4 ---------------------
 
-.MyV::before {
-  content: '';
-  @apply block w-40 h-40 absolute top-50% right-110% mr-10;
+// .MyV::before {
+//   content: '';
+//   @apply block w-40 h-40 absolute top-50% right-110% mr-10;
 
-  background-image: url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2024/12/svg1821.webp');
-  /* URL de la imagen */
-  background-size: cover;
-  /* Asegura que la imagen se ajuste al tamaño del contenedor */
-  background-position: center;
+//   background-image: url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2024/12/svg1821.webp');
+//   /* URL de la imagen */
+//   background-size: cover;
+//   /* Asegura que la imagen se ajuste al tamaño del contenedor */
+//   background-position: center;
 
-  /* Coloca la imagen justo después del h2 */
-  transform: translateY(-50%);
+//   /* Coloca la imagen justo después del h2 */
+//   transform: translateY(-50%);
 
-}
+// }
 
-.MyV2::before {
-  content: '';
-  @apply block w-40 h-40 absolute top-50% right-110% mr-10;
+// .MyV2::before {
+//   content: '';
+//   @apply block w-40 h-40 absolute top-50% right-110% mr-10;
 
-  background-image: url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2024/12/Frame.webp');
-  /* URL de la imagen */
-  background-size: cover;
-  /* Asegura que la imagen se ajuste al tamaño del contenedor */
-  background-position: center;
+//   background-image: url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2024/12/Frame.webp');
+//   /* URL de la imagen */
+//   background-size: cover;
+//   /* Asegura que la imagen se ajuste al tamaño del contenedor */
+//   background-position: center;
 
-  /* Coloca la imagen justo después del h2 */
-  transform: translateY(-50%);
+//   /* Coloca la imagen justo después del h2 */
+//   transform: translateY(-50%);
 
-}
+// }
 
 
 // --------------------------------------------------------
