@@ -11,17 +11,21 @@
 // Obtén la URI de la solicitud
 $currentUrl = $_SERVER['REQUEST_URI'];
 $activo = false;
+$logo_activo = false;
 
 // Verifica si contiene la palabra "concesionarios"
 if (strpos($currentUrl, 'concesionarios') !== false) {
   // Ejecuta el código si "concesionarios" está presente en la URL
   $activo = true;
+  $logo_activo = false;
 } elseif (strpos($currentUrl, 'libro-de-reclamaciones') !== false) {
   // Ejecuta el código si "concesionarios" está presente en la URL
   $activo = true;
+  $logo_activo = true;
 } else {
   // Ejecuta el código si "concesionarios" no está presente en la URL
   $activo = false;
+  $logo_activo = true;
 }
 ?>
 
@@ -30,9 +34,19 @@ if (strpos($currentUrl, 'concesionarios') !== false) {
   <header
     class="md:px-100 px-20 w-full h-86 flex items-center <?= ($activo != true) ? 'justify-between' : 'justify-center' ?> fixed z-500 top-0 left-0 bg-white">
     <div class="md:[&_img]:w-200 [&_img]:w-150 [&_img]:h-auto [&_img]:onject-contain">
-      <?php if (function_exists('the_custom_logo')) {
-        the_custom_logo();
-      } ?>
+      <?php
+      if (function_exists('get_custom_logo')) {
+        if ($logo_activo) {
+          the_custom_logo(); // Muestra el logo con enlace al home
+        } else {
+          $custom_logo_id = get_theme_mod('custom_logo');
+          if ($custom_logo_id) {
+            echo wp_get_attachment_image($custom_logo_id, 'full'); // Muestra solo la imagen
+          }
+        }
+      }
+      ?>
+
     </div>
     <?php if ($activo != true): ?>
       <?php
