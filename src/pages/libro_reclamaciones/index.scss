@@ -1,13 +1,16 @@
 .grilla-libro {
   @apply grid grid-cols-3 gap-30;
 
+  .fecha,
   input,
   select {
-    @apply border-amarillo rounded-8 bg-transparent w-full h-46 text-negro_light;
+    @apply border-amarillo border-solid border-1 rounded-8 bg-transparent w-full h-46 text-negro_light;
   }
 }
 
 .area-texto-libro {
+  @apply col-span-3;
+
   textarea {
     @apply border-amarillo rounded-8 bg-transparent w-full text-negro_light px-18 py-10;
   }

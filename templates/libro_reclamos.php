@@ -20,6 +20,11 @@ get_header();
       sugerencias, comentarios o elogios sobre nuestro servicio, compártelos aquí. Este formulario es el medio más
       efectivo para hacernos llegar tus mensajes.</p>
   </div>
+  <div class="grid grid-cols-3 mt-38">
+    <p class="text-17 text-center">Razón social: <b>Charlotte S.A</b></p>
+    <p class="text-17 text-center">Razón social: <b>20101152724</b></p>
+    <p class="text-17 text-center">Dirección: <b>Av. de la Floresta, 15038, Lima</b></p>
+  </div>
   <div class=" mx-auto mt-50 mb-89">
     <?= do_shortcode($form) ?>
   </div>

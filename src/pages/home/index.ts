@@ -3,7 +3,6 @@ import "@splidejs/splide/css";
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 // -------------- SECTION 2 -------------------------
-
 const carousel = document.querySelector("#carousel") as HTMLElement;
 const slides = document.querySelectorAll("#carousel .splide__slide");
 if (carousel) {
