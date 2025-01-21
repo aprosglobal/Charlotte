@@ -12,37 +12,6 @@
 
 // --------------------- SECTION 4 ---------------------
 
-// .MyV::before {
-//   content: '';
-//   @apply block w-40 h-40 absolute top-50% right-110% mr-10;
-
-//   background-image: url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2024/12/svg1821.webp');
-//   /* URL de la imagen */
-//   background-size: cover;
-//   /* Asegura que la imagen se ajuste al tamaño del contenedor */
-//   background-position: center;
-
-//   /* Coloca la imagen justo después del h2 */
-//   transform: translateY(-50%);
-
-// }
-
-// .MyV2::before {
-//   content: '';
-//   @apply block w-40 h-40 absolute top-50% right-110% mr-10;
-
-//   background-image: url('https://apros-qa.net.pe/charlotte/wp-content/uploads/2024/12/Frame.webp');
-//   /* URL de la imagen */
-//   background-size: cover;
-//   /* Asegura que la imagen se ajuste al tamaño del contenedor */
-//   background-position: center;
-
-//   /* Coloca la imagen justo después del h2 */
-//   transform: translateY(-50%);
-
-// }
-
-
 // --------------------------------------------------------
 
 // --------------------- SECTION 6 ---------------------
@@ -164,11 +133,11 @@
 // --------------------------------------------------------
 // --------------------- SECTION 9 ---------------------
 .grilla-formulario {
-  @apply grid grid-cols-2 gap-10 mt-29;
+  @apply grid md:grid-cols-2 grid-cols-1 gap-10 mt-29;
 }
 
 .div-msj {
-  @apply col-span-2;
+  @apply md:col-span-2 col-span-1;
 
   textarea {
     @apply border-amarillo rounded-8 bg-transparent w-full pl-15 pt-10;

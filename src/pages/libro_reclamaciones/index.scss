@@ -1,5 +1,5 @@
 .grilla-libro {
-  @apply grid grid-cols-3 gap-30;
+  @apply grid md:grid-cols-3 grid-cols-1 gap-30;
 
   input,
   select {
@@ -8,7 +8,7 @@
 }
 
 .grilla-tutor {
-  @apply grid grid-cols-2 gap-30;
+  @apply grid md:grid-cols-2 grid-cols-1 gap-30;
 
   input,
   select {
@@ -16,8 +16,12 @@
   }
 }
 
+.titulo-tutor {
+  @apply md:col-span-2 col-span-1;
+}
+
 .area-texto-libro {
-  @apply col-span-3;
+  @apply md:col-span-3 col-span-1;
 
   textarea {
     @apply border-amarillo rounded-8 bg-transparent w-full text-negro_light px-18 py-10;

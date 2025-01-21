@@ -180,22 +180,24 @@ get_header();
           ?>
           <div class="w-full flex <?= (($idx + 1) % 2 == 1) ? 'flex-row' : 'flex-row-reverse'; ?>  relative py-5 ">
             <div class="w-50% relative">
-              <div class="w-100 md:w-230 h-100 md:h-230 mx-auto rounded-full bg-white flex justify-center items-center">
+              <div class="w-120 md:w-230 h-120 md:h-230 mx-auto rounded-full bg-white flex justify-center items-center">
                 <div
                   class="[&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200  [&_img]:object-cover [&_img]:rounded-full">
                   <?= wp_get_attachment_image($time['image'], 'full') ?>
                 </div>
               </div>
-              <div class="h-5 w-28% bg-white absolute top-50% <?= (($idx + 1) % 2 == 1) ? 'right-0' : 'left-0'; ?> z-1">
+              <div
+                class="h-5 md:w-28% w-18% bg-white absolute top-50% <?= (($idx + 1) % 2 == 1) ? 'right-0' : 'left-0'; ?> z-1">
               </div>
             </div>
             <div class="w-50% flex items-center justify-center">
               <div class="w-fit">
                 <div
-                  class="text-25 text-white md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary text-center">
+                  class="text-25 text-white md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary md:text-center text-left">
                   <?= $time["year"] ?>
                 </div>
-                <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202 text-white">
+                <div
+                  class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-130 md:max-w-202 text-white">
                   <?= $time["text"] ?>
                 </div>
               </div>
@@ -326,7 +328,7 @@ get_header();
   <a href="https://wa.me/<?= $whatsapp["whatsapp_num"] ?>?text=<?= $mensajeCodificado ?>" target="_blank"
     class="btn-wsp fixed bottom-0 right-0 ">
     <div style="background-image: url('<?= $whatsapp["boton_whatsapp"] ?>');"
-      class="h-80 w-80 rounded-5 bg-cover bg-norepeat">
+      class="md:h-80 md:w-80 w-60 h-60 rounded-5 bg-cover bg-norepeat">
     </div>
   </a>
 <?php endif; ?>
