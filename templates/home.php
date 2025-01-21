@@ -179,8 +179,8 @@ get_header();
         foreach ($section_6["time_line"] as $idx => $time):
           ?>
           <div class="w-full flex <?= (($idx + 1) % 2 == 1) ? 'flex-row' : 'flex-row-reverse'; ?>  relative py-5 ">
-            <div class="w-50% relative">
-              <div class="w-120 md:w-230 h-120 md:h-230 mx-auto rounded-full bg-white flex justify-center items-center">
+            <div class="w-50% relative md:block flex items-center">
+              <div class="w-120 md:w-230 h-120 md:h-230 mx-auto rounded-full bg-white flex justify-center items-center ">
                 <div
                   class="[&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200  [&_img]:object-cover [&_img]:rounded-full">
                   <?= wp_get_attachment_image($time['image'], 'full') ?>
