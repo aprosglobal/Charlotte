@@ -1,10 +1,18 @@
 .grilla-libro {
   @apply grid grid-cols-3 gap-30;
 
-  .fecha,
   input,
   select {
     @apply border-amarillo border-solid border-1 rounded-8 bg-transparent w-full h-46 text-negro_light;
+  }
+}
+
+.grilla-tutor {
+  @apply grid grid-cols-2 gap-30;
+
+  input,
+  select {
+    @apply border-amarillo border-solid border-1 rounded-8 bg-transparent w-full h-47 text-negro_light;
   }
 }
 

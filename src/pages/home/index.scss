@@ -162,3 +162,25 @@
 }
 
 // --------------------------------------------------------
+// --------------------- SECTION 9 ---------------------
+.grilla-formulario {
+  @apply grid grid-cols-2 gap-10 mt-29;
+}
+
+.div-msj {
+  @apply col-span-2;
+
+  textarea {
+    @apply border-amarillo rounded-8 bg-transparent w-full pl-15 pt-10;
+  }
+}
+
+.div-ipt input {
+  @apply border-amarillo rounded-8 bg-transparent w-full;
+}
+
+#btnsendform input {
+  @apply w-121 h-43 rounded-8 bg-naranja hover:bg-cafe2 focus:bg-cafe2 text-white font-bold text-16;
+}
+
+// --------------------------------------------------------
