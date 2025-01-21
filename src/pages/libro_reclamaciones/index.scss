@@ -1,13 +1,28 @@
 .grilla-libro {
-  @apply grid grid-cols-3 gap-30;
+  @apply grid md:grid-cols-3 grid-cols-1 gap-30;
 
   input,
   select {
-    @apply border-amarillo rounded-8 bg-transparent w-full h-46 text-negro_light;
+    @apply border-amarillo border-solid border-1 rounded-8 bg-transparent w-full h-46 text-negro_light;
   }
 }
 
+.grilla-tutor {
+  @apply grid md:grid-cols-2 grid-cols-1 gap-30;
+
+  input,
+  select {
+    @apply border-amarillo border-solid border-1 rounded-8 bg-transparent w-full h-47 text-negro_light;
+  }
+}
+
+.titulo-tutor {
+  @apply md:col-span-2 col-span-1;
+}
+
 .area-texto-libro {
+  @apply md:col-span-3 col-span-1;
+
   textarea {
     @apply border-amarillo rounded-8 bg-transparent w-full text-negro_light px-18 py-10;
   }

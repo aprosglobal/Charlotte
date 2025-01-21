@@ -26,7 +26,7 @@ get_header();
       <h1 class="text-center font-bold font-frank md:text-35 text-25 leading-104% "><?= $section_1["title"] ?></h1>
       <div class="flex justify-center items-center gap-12 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-20 text-amarillo"><?= $section_1["phrase"] ?></span>
+        <span class="font-covered text-22 text-amarillo"><?= $section_1["phrase"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <p class="mt-20 md:text-16 text-13 text-center">
@@ -49,7 +49,7 @@ get_header();
     <h2 class="text-center md:px-0 px-66"><?= $section_2["title"] ?></h2>
     <div class="flex justify-center items-center gap-12 md:mt-55 mt-40">
       <div class="w-22 h-1 bg-amarillo"></div>
-      <span class="font-covered text-20 text-amarillo"><?= $section_2["phrase"] ?></span>
+      <span class="font-covered text-22 text-amarillo"><?= $section_2["phrase"] ?></span>
       <div class="w-22 h-1 bg-amarillo"></div>
     </div>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-20 md:mt-78 mt-50">
@@ -98,7 +98,7 @@ get_header();
       <h2 class="md:text-left text-center"><?= $section_3["title"] ?></h2>
       <div class="flex md:justify-start justify-center items-center gap-12 md:my-53 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-20 text-amarillo"><?= $section_3["phrase"] ?></span>
+        <span class="font-covered text-22 text-amarillo"><?= $section_3["phrase"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <p class="md:text-left text-center md:text-16 text-13">
@@ -126,14 +126,14 @@ get_header();
       <div>
         <div class="flex justify-start items-center gap-12 mb-15">
           <div class="w-22 h-1 bg-negro_light"></div>
-          <span class="font-covered text-20 text-negro_light"><?= $section_4["mision_phrase"] ?></span>
+          <span class="font-covered text-22 text-negro_light"><?= $section_4["mision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
         </div>
         <h2 class="MyV relative inline-block text-white"><?= $section_4["mision_title"] ?></h2>
         <p class="md:text-16 text-13 text-white mt-20"><?= $section_4["mision_text"] ?></p>
         <div class="flex justify-start items-center gap-12 my-15">
           <div class="w-22 h-1 bg-negro_light"></div>
-          <span class="font-covered text-20 text-negro_light"><?= $section_4["vision_phrase"] ?></span>
+          <span class="font-covered text-22 text-negro_light"><?= $section_4["vision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
         </div>
         <h2 class="MyV2 relative inline-block text-white"><?= $section_4["vision_title"] ?></h2>
@@ -156,7 +156,7 @@ get_header();
         <h2 class="text-center"><?= $section_5["title"] ?></h2>
         <div class="flex justify-center items-center gap-12 md:my-35 my-30">
           <div class="w-22 h-1 bg-amarillo"></div>
-          <span class="font-covered text-20 text-amarillo"><?= $section_5["phrase"] ?></span>
+          <span class="font-covered text-22 text-amarillo"><?= $section_5["phrase"] ?></span>
           <div class="w-22 h-1 bg-amarillo"></div>
         </div>
         <p class="text-center md:text-16 text-13 md:px-0 px-25"><?= $section_5["text"] ?></p>
@@ -169,45 +169,45 @@ get_header();
   <div class="w-full overflow-x-hidden">
     <div class="flex justify-center items-center gap-12 mt-60 mb-20">
       <div class="w-22 h-1 bg-amarillo"></div>
-      <span class="font-covered text-20 text-amarillo"><?= $section_6["phrase"] ?></span>
+      <span class="font-covered text-22 text-amarillo"><?= $section_6["phrase"] ?></span>
       <div class="w-22 h-1 bg-amarillo"></div>
     </div>
     <h2 class="text-center text-white mb-60"><?= $section_6["title"] ?></h2>
-
-    <div class="timeline" data-aos="fade-up">
-      <div class="slider-linea-container">
-
-        <div class="splide" id="slider-linea">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <?php
-              if ($section_6["time_line"]):
-                foreach ($section_6["time_line"] as $idx => $time):
-                  ?>
-                  <li class="splide__slide">
-                    <div
-                      class="card-linea__item <?= (($idx + 1) % 2 == 1) ? 'impar' : 'par'; ?> [&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200 [&_img]:mx-auto [&_img]:object-cover [&_img]:rounded-full">
-
-                      <?= wp_get_attachment_image($time['image'], 'full') ?>
-                      <div>
-                        <div
-                          class="text-25 text-white md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
-                          <?= $time["year"] ?>
-                        </div>
-                        <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202 text-white">
-                          <?= $time["text"] ?>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <?php
-                endforeach;
-              endif;
-              ?>
-            </ul>
+    <div class="container">
+      <?php
+      if ($section_6["time_line"]):
+        foreach ($section_6["time_line"] as $idx => $time):
+          ?>
+          <div class="w-full flex <?= (($idx + 1) % 2 == 1) ? 'flex-row' : 'flex-row-reverse'; ?>  relative py-5 ">
+            <div class="w-50% relative md:block flex items-center">
+              <div class="w-120 md:w-230 h-120 md:h-230 mx-auto rounded-full bg-white flex justify-center items-center ">
+                <div
+                  class="[&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200  [&_img]:object-cover [&_img]:rounded-full">
+                  <?= wp_get_attachment_image($time['image'], 'full') ?>
+                </div>
+              </div>
+              <div
+                class="h-5 md:w-28% w-18% bg-white absolute top-50% <?= (($idx + 1) % 2 == 1) ? 'right-0' : 'left-0'; ?> z-1">
+              </div>
+            </div>
+            <div class="w-50% flex items-center justify-center">
+              <div class="w-fit">
+                <div
+                  class="text-25 text-white md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary md:text-center text-left">
+                  <?= $time["year"] ?>
+                </div>
+                <div
+                  class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-130 md:max-w-202 text-white">
+                  <?= $time["text"] ?>
+                </div>
+              </div>
+            </div>
+            <div class="h-full w-5 bg-white absolute left-50% top-0"></div>
           </div>
-        </div>
-      </div>
+          <?php
+        endforeach;
+      endif;
+      ?>
     </div>
   </div>
 </section>
@@ -216,7 +216,7 @@ get_header();
   <h2 class="text-center font-bold"><?= $section_7["title"] ?></h2>
   <div class="flex justify-center items-center gap-12 md:my-47 my-40">
     <div class="w-22 h-1 bg-amarillo"></div>
-    <span class="font-covered text-20 text-amarillo"><?= $section_7["phrase"] ?></span>
+    <span class="font-covered text-22 text-amarillo"><?= $section_7["phrase"] ?></span>
     <div class="w-22 h-1 bg-amarillo"></div>
   </div>
   <div class="grid md:grid-cols-2 grid-cols-1 gap-20">
@@ -268,7 +268,7 @@ get_header();
       <h2 class="md:text-left text-center"><?= $section_9["title_contact"] ?></h2>
       <div class="flex justify-start items-center gap-12 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-20 text-amarillo"><?= $section_9["phrase_contact"] ?></span>
+        <span class="font-covered text-22 text-amarillo"><?= $section_9["phrase_contact"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <p><b>Llámanos:</b><a href="tel:<?= $section_9["phone"] ?>" class="decoration-none"><?= $section_9["phone"] ?></a>
@@ -277,52 +277,14 @@ get_header();
       </p>
       <p><b>Ó déjanos tus datos y te contáctamos:</b></p>
       <?php if ($section_9["contact_form"]): ?>
-        <div class="grid grid-cols-2 gap-10 mt-29">
-          <div class="relative">
-            <input type="text" placeholder="Nombre*" id="nombre-form" minlength="12" maxlength="45"
-              class="!border-amarillo !rounded-8 !bg-transparent w-full"
-              oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '') ;" required>
-            <span class="font-400 text-12 leading-126% text-red vali-ipt-nombre absolute right-50 top-30 hidden ">Ingrese
-              su nombre</span>
-          </div>
-          <div class="relative">
-            <input type="text" placeholder="Compañia*" id="compania-form" minlength="12" maxlength="45"
-              class="!border-amarillo !rounded-8 !bg-transparent w-full"
-              oninput="this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, '') ;" required>
-            <span
-              class="font-400 text-12 leading-126% text-red vali-ipt-compania absolute right-50 top-30 hidden ">Ingrese
-              el nombre de la compañia</span>
-          </div>
-          <div class="relative">
-            <input type="tel" placeholder="Celular*" id="celular-form" minlength="9" maxlength="9"
-              class="!border-amarillo !rounded-8 !bg-transparent w-full"
-              oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
-            <span class="font-400 text-12 leading-126% text-red vali-ipt-celular absolute right-50 top-30 hidden ">Ingrese
-              su número celular</span>
-          </div>
-          <div class="relative">
-            <input type="email" placeholder="Correo electronico*" id="correo-form" minlength="12" maxlength="45"
-              class="!border-amarillo !rounded-8 !bg-transparent w-full" required>
-            <span class="font-400 text-12 leading-126% text-red vali-ipt-correo absolute right-50 top-30 hidden ">Ingrese
-              su correo electronico</span>
-          </div>
-          <textarea name="" id="mensaje-form" cols="30" rows="5" placeholder="Mensaje"
-            class="col-span-2 pl-15 pt-10 !border-amarillo !rounded-8 !bg-transparent"></textarea>
-          <button id="btnsendform"
-            class="w-121 h-43 rounded-8 bg-naranja hover:bg-cafe2 focus:bg-cafe2 text-white font-bold text-16">ENVIAR</button>
-        </div>
-        <div class="w-full h-auto mx-auto mt-20  hidden thanks-message ">
-        </div>
-        <div class="hidden">
-          <?= do_shortcode($section_9["contact_form"]) ?>
-        </div>
+        <?= do_shortcode($section_9["contact_form"]) ?>
       <?php endif; ?>
     </div>
     <div class="md:w-50% w-full">
       <h2 class="md:text-left text-center"><?= $section_9["title_conoce"] ?></h2>
       <div class="flex justify-start items-center gap-12 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-20 text-amarillo"><?= $section_9["phrase_conoce"] ?></span>
+        <span class="font-covered text-22 text-amarillo"><?= $section_9["phrase_conoce"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <div class="md:[&_img]:h-400 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
@@ -342,7 +304,7 @@ get_header();
 
   <div class="py-47 px-54 bg-blue md:!w-50% w-full md:h-217 h-auto flex justify-between forma-parte">
     <div class="flex flex-col">
-      <span class="font-covered text-20 text-amarillo"><?= $section_10["phrase"] ?></span>
+      <span class="font-covered text-22 text-amarillo"><?= $section_10["phrase"] ?></span>
       <p class="font-bond text-25 text-white"><?= $section_10["title"] ?></p>
       <a href="tel:<?= $section_10["phone"] ?>"
         class="decoration-none mt-26 md:text-16 text-20 font-600 text-white hover:text-naranja">
@@ -355,13 +317,25 @@ get_header();
 </section>
 <!-- ----------------------------------------- -->
 <!-- ------------------ BTN WHATSAPP ----------------- -->
-<?php if ($whatsapp["whatsapp"] && $whatsapp["boton_whatsapp"]): ?>
-  <a href="<?= $whatsapp["whatsapp"] ?>" class="btn-wsp fixed bottom-0 right-0 ">
+<?php if ($whatsapp["whatsapp_num"] && $whatsapp["boton_whatsapp"]): ?>
+  <?php
+  if ($whatsapp["whatsapp_msj"] != '') {
+    $mensajeCodificado = urlencode($whatsapp["whatsapp_msj"]); // Codificar el mensaje
+  } else {
+    $mensajeCodificado = '';
+  }
+  ?>
+  <a href="https://wa.me/<?= $whatsapp["whatsapp_num"] ?>?text=<?= $mensajeCodificado ?>" target="_blank"
+    class="btn-wsp fixed bottom-0 right-0 ">
     <div style="background-image: url('<?= $whatsapp["boton_whatsapp"] ?>');"
-      class="h-80 w-80 rounded-5 bg-cover bg-norepeat">
+      class="md:h-80 md:w-80 w-60 h-60 rounded-5 bg-cover bg-norepeat">
     </div>
   </a>
 <?php endif; ?>
 <!-- ---------------------------------------------------- -->
 <?php
 get_footer();
+
+
+
+
