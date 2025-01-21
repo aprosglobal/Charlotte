@@ -91,12 +91,13 @@ document.addEventListener("scroll", () => {
   const clientHeight = document.documentElement.clientHeight; // Altura del área visible (viewport)
 
   const isAtBottom = scrollTop + clientHeight >= scrollHeight - 5; // Detecta si está al final (con un margen)
-
-  if (isAtBottom) {
-    btn_wsp.style.transform = "translateY(-95%)";
-    btn_wsp.style.transition = "transform 0.5s ease";
-  } else {
-    btn_wsp.style.transform = "translateY(0)";
+  if (btn_wsp) {
+    if (isAtBottom) {
+      btn_wsp.style.transform = "translateY(-95%)";
+      btn_wsp.style.transition = "transform 0.5s ease";
+    } else {
+      btn_wsp.style.transform = "translateY(0)";
+    }
   }
 });
 // -------------------------------------------------------
@@ -105,18 +106,19 @@ const btn_menu_mobile = document.querySelector('.btn-menu-mobile') as HTMLElemen
 const menu_mobile = document.querySelector('.menu-mobile') as HTMLElement;
 const li_menu_mobile = document.querySelectorAll('.ul-menu-mobile li a');
 
+if (btn_menu_mobile) {
+  btn_menu_mobile.addEventListener('click', function () {
+    menu_mobile.classList.toggle('h-0')
+    menu_mobile.classList.toggle('p-20')
+  })
 
-btn_menu_mobile.addEventListener('click', function () {
-  menu_mobile.classList.toggle('h-0')
-  menu_mobile.classList.toggle('p-20')
-})
-
-li_menu_mobile.forEach((ancla) => {
-  ancla.addEventListener('click', function () {
-    setTimeout(() => {
-      menu_mobile.classList.toggle('h-0');
-      menu_mobile.classList.toggle('p-20');
-    }, 300);
+  li_menu_mobile.forEach((ancla) => {
+    ancla.addEventListener('click', function () {
+      setTimeout(() => {
+        menu_mobile.classList.toggle('h-0');
+        menu_mobile.classList.toggle('p-20');
+      }, 300);
+    });
   });
-});
+}
 // -------------------------------------------------

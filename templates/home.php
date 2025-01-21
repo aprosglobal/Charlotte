@@ -173,41 +173,39 @@ get_header();
       <div class="w-22 h-1 bg-amarillo"></div>
     </div>
     <h2 class="text-center text-white mb-60"><?= $section_6["title"] ?></h2>
-
-    <div class="timeline" data-aos="fade-up">
-      <div class="slider-linea-container">
-
-        <div class="splide" id="slider-linea">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <?php
-              if ($section_6["time_line"]):
-                foreach ($section_6["time_line"] as $idx => $time):
-                  ?>
-                  <li class="splide__slide">
-                    <div
-                      class="card-linea__item <?= (($idx + 1) % 2 == 1) ? 'impar' : 'par'; ?> [&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200 [&_img]:mx-auto [&_img]:object-cover [&_img]:rounded-full">
-
-                      <?= wp_get_attachment_image($time['image'], 'full') ?>
-                      <div>
-                        <div
-                          class="text-25 text-white md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary">
-                          <?= $time["year"] ?>
-                        </div>
-                        <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202 text-white">
-                          <?= $time["text"] ?>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <?php
-                endforeach;
-              endif;
-              ?>
-            </ul>
+    <div class="container">
+      <?php
+      if ($section_6["time_line"]):
+        foreach ($section_6["time_line"] as $idx => $time):
+          ?>
+          <div class="w-full flex <?= (($idx + 1) % 2 == 1) ? 'flex-row' : 'flex-row-reverse'; ?>  relative py-5 ">
+            <div class="w-50% relative">
+              <div class="w-100 md:w-230 h-100 md:h-230 mx-auto rounded-full bg-white flex justify-center items-center">
+                <div
+                  class="[&_img]:flex-shrink-0 [&_img]:w-100 [&_img]:md:w-200 [&_img]:h-100 [&_img]:md:h-200  [&_img]:object-cover [&_img]:rounded-full">
+                  <?= wp_get_attachment_image($time['image'], 'full') ?>
+                </div>
+              </div>
+              <div class="h-5 w-28% bg-white absolute top-50% <?= (($idx + 1) % 2 == 1) ? 'right-0' : 'left-0'; ?> z-1">
+              </div>
+            </div>
+            <div class="w-50% flex items-center justify-center">
+              <div class="w-fit">
+                <div
+                  class="text-25 text-white md:text-35 leading-25 md:leading-35 font-bold mb-5 md:mb-15 font-secondary text-center">
+                  <?= $time["year"] ?>
+                </div>
+                <div class="card-linea__item-text text-12 md:text-14 leading-16 md:leading-19 max-w-202 text-white">
+                  <?= $time["text"] ?>
+                </div>
+              </div>
+            </div>
+            <div class="h-full w-5 bg-white absolute left-50% top-0"></div>
           </div>
-        </div>
-      </div>
+          <?php
+        endforeach;
+      endif;
+      ?>
     </div>
   </div>
 </section>
@@ -335,3 +333,7 @@ get_header();
 <!-- ---------------------------------------------------- -->
 <?php
 get_footer();
+
+
+
+
