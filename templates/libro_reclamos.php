@@ -72,8 +72,8 @@ get_header();
         //cargar los distritos
         $('#select-provincia').trigger('change');
 
-        $("#departamento").val($('#select-departamento option:selected').text());
-        $("#provincia").val($('#select-provincia option:selected').text());
+        $(".departamento-class").val($('#select-departamento option:selected').text());
+        $(".provincia-class").val($('#select-provincia option:selected').text());
 
       });
 
@@ -97,14 +97,14 @@ get_header();
           $('#select-distrito').append(select03);
         });
 
-        $("#provincia").val($('#select-provincia option:selected').text());
+        $(".provincia-class").val($('#select-provincia option:selected').text());
 
-        $("#distrito").val($('#select-distrito option:selected').text());
+        $(".distrito-class").val($('#select-distrito option:selected').text());
 
       });
 
       $('#select-distrito').on('change', function () {
-        $("#distrito").val($('#select-distrito option:selected').text());
+        $(".distrito-class").val($('#select-distrito option:selected').text());
       });
 
     }
