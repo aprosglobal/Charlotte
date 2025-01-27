@@ -26,7 +26,7 @@ get_header();
       <h1 class="text-center font-bold font-frank md:text-35 text-25 leading-104% "><?= $section_1["title"] ?></h1>
       <div class="flex justify-center items-center gap-12 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-22 text-amarillo"><?= $section_1["phrase"] ?></span>
+        <span class="font-covered text-28 text-amarillo"><?= $section_1["phrase"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <p class="mt-20 md:text-16 text-13 text-center">
@@ -49,7 +49,7 @@ get_header();
     <h2 class="text-center md:px-0 px-66"><?= $section_2["title"] ?></h2>
     <div class="flex justify-center items-center gap-12 md:mt-55 mt-40">
       <div class="w-22 h-1 bg-amarillo"></div>
-      <span class="font-covered text-22 text-amarillo"><?= $section_2["phrase"] ?></span>
+      <span class="font-covered text-28 text-amarillo"><?= $section_2["phrase"] ?></span>
       <div class="w-22 h-1 bg-amarillo"></div>
     </div>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-20 md:mt-78 mt-50">
@@ -98,7 +98,7 @@ get_header();
       <h2 class="md:text-left text-center"><?= $section_3["title"] ?></h2>
       <div class="flex md:justify-start justify-center items-center gap-12 md:my-53 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-22 text-amarillo"><?= $section_3["phrase"] ?></span>
+        <span class="font-covered text-28 text-amarillo"><?= $section_3["phrase"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <p class="md:text-left text-center md:text-16 text-13">
@@ -122,18 +122,20 @@ get_header();
 <!-- ------------------ SECTION 4 ----------------- -->
 <section class="mt-93">
   <div class="flex md:flex-row flex-col bg-naranja ">
-    <div class="md:w-50% w-full grid items-center md:pl-233 pl-68 md:pr-60 pr-18 py-40">
+    <div class="md:w-50% w-full grid items-center md:pl-233 pl-28 md:pr-60 pr-28 py-40">
       <div>
         <div class="flex justify-start items-center gap-12 mb-15">
           <div class="w-22 h-1 bg-negro_light"></div>
-          <span class="font-covered text-22 text-negro_light"><?= $section_4["mision_phrase"] ?></span>
+          <span
+            class="font-covered text-22 text-negro_light text-center md:text-left "><?= $section_4["mision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
         </div>
         <h2 class="MyV relative inline-block text-white"><?= $section_4["mision_title"] ?></h2>
         <p class="md:text-16 text-13 text-white mt-20"><?= $section_4["mision_text"] ?></p>
         <div class="flex justify-start items-center gap-12 my-15">
           <div class="w-22 h-1 bg-negro_light"></div>
-          <span class="font-covered text-22 text-negro_light"><?= $section_4["vision_phrase"] ?></span>
+          <span
+            class="font-covered text-22 text-negro_light text-center md:text-left"><?= $section_4["vision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
         </div>
         <h2 class="MyV2 relative inline-block text-white"><?= $section_4["vision_title"] ?></h2>
@@ -156,7 +158,7 @@ get_header();
         <h2 class="text-center"><?= $section_5["title"] ?></h2>
         <div class="flex justify-center items-center gap-12 md:my-35 my-30">
           <div class="w-22 h-1 bg-amarillo"></div>
-          <span class="font-covered text-22 text-amarillo"><?= $section_5["phrase"] ?></span>
+          <span class="font-covered text-28 text-amarillo text-center"><?= $section_5["phrase"] ?></span>
           <div class="w-22 h-1 bg-amarillo"></div>
         </div>
         <p class="text-center md:text-16 text-13 md:px-0 px-25"><?= $section_5["text"] ?></p>
@@ -169,7 +171,7 @@ get_header();
   <div class="w-full overflow-x-hidden">
     <div class="flex justify-center items-center gap-12 mt-60 mb-20">
       <div class="w-22 h-1 bg-amarillo"></div>
-      <span class="font-covered text-22 text-amarillo"><?= $section_6["phrase"] ?></span>
+      <span class="font-covered text-28 text-amarillo text-center"><?= $section_6["phrase"] ?></span>
       <div class="w-22 h-1 bg-amarillo"></div>
     </div>
     <h2 class="text-center text-white mb-60"><?= $section_6["title"] ?></h2>
@@ -216,7 +218,7 @@ get_header();
   <h2 class="text-center font-bold"><?= $section_7["title"] ?></h2>
   <div class="flex justify-center items-center gap-12 md:my-47 my-40">
     <div class="w-22 h-1 bg-amarillo"></div>
-    <span class="font-covered text-22 text-amarillo"><?= $section_7["phrase"] ?></span>
+    <span class="font-covered text-28 text-amarillo"><?= $section_7["phrase"] ?></span>
     <div class="w-22 h-1 bg-amarillo"></div>
   </div>
   <div class="grid md:grid-cols-2 grid-cols-1 gap-20">
@@ -268,7 +270,7 @@ get_header();
       <h2 class="md:text-left text-center"><?= $section_9["title_contact"] ?></h2>
       <div class="flex justify-start items-center gap-12 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-22 text-amarillo"><?= $section_9["phrase_contact"] ?></span>
+        <span class="font-covered text-28 text-amarillo"><?= $section_9["phrase_contact"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <p><b>Llámanos:</b><a href="tel:<?= $section_9["phone"] ?>" class="decoration-none"><?= $section_9["phone"] ?></a>
@@ -284,7 +286,7 @@ get_header();
       <h2 class="md:text-left text-center"><?= $section_9["title_conoce"] ?></h2>
       <div class="flex justify-start items-center gap-12 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-22 text-amarillo"><?= $section_9["phrase_conoce"] ?></span>
+        <span class="font-covered text-28 text-amarillo"><?= $section_9["phrase_conoce"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <div class="md:[&_img]:h-400 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
@@ -294,7 +296,7 @@ get_header();
   </div>
 </section>
 <!-- ------------------ SECTION 10 ----------------- -->
-<section class="w-full mt-90 flex md:flex-row flex-col justify-between gap-18">
+<section class="w-full mt-90 flex md:flex-row flex-col justify-between">
   <div class="md:!w-20% w-full [&_img]:w-full [&_img]:h-217 [&_img]:object-cover">
     <?= wp_get_attachment_image($section_10['imagen_1'], 'full') ?>
   </div>
@@ -304,7 +306,7 @@ get_header();
 
   <div class="py-47 px-54 bg-blue md:!w-50% w-full md:h-217 h-auto flex justify-between forma-parte">
     <div class="flex flex-col">
-      <span class="font-covered text-22 text-amarillo"><?= $section_10["phrase"] ?></span>
+      <span class="font-covered text-28 text-amarillo"><?= $section_10["phrase"] ?></span>
       <p class="font-bond text-25 text-white"><?= $section_10["title"] ?></p>
       <a href="tel:<?= $section_10["phone"] ?>"
         class="decoration-none mt-26 md:text-16 text-20 font-600 text-white hover:text-naranja">
