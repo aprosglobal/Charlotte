@@ -174,7 +174,7 @@ get_header();
   <div class="w-full overflow-x-hidden">
     <div class="flex justify-center items-center gap-12 mt-60 mb-20">
       <div class="w-22 h-1 bg-amarillo"></div>
-      <span class="font-covered text-28 text-amarillo text-center"><?= $section_6["phrase"] ?></span>
+      <span class="font-covered text-28 text-amarillo text-center md:w-auto w-235"><?= $section_6["phrase"] ?></span>
       <div class="w-22 h-1 bg-amarillo"></div>
     </div>
     <h2 class="text-center text-white mb-60"><?= $section_6["title"] ?></h2>
@@ -273,7 +273,7 @@ get_header();
       <h2 class="md:text-left text-center"><?= $section_9["title_contact"] ?></h2>
       <div class="flex justify-start items-center gap-12 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-28 text-amarillo"><?= $section_9["phrase_contact"] ?></span>
+        <span class="font-covered text-28 text-amarillo text-center"><?= $section_9["phrase_contact"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <p><b>Llámanos:</b><a href="tel:<?= $section_9["phone"] ?>" class="decoration-none"><?= $section_9["phone"] ?></a>
@@ -289,7 +289,7 @@ get_header();
       <h2 class="md:text-left text-center"><?= $section_9["title_conoce"] ?></h2>
       <div class="flex justify-start items-center gap-12 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
-        <span class="font-covered text-28 text-amarillo"><?= $section_9["phrase_conoce"] ?></span>
+        <span class="font-covered text-28 text-amarillo text-center"><?= $section_9["phrase_conoce"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
       <div class="md:[&_img]:h-400 [&_img]:w-full [&_img]:h-auto [&_img]:object-cover">
