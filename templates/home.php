@@ -22,14 +22,16 @@ get_header();
   <video src="<?= $section_1["video"] ?>" muted autoplay loop
     class="md:w-full md:h-auto w-auto h-100vh md:object-contain object-cover"></video>
   <div class="bg-rojo py-72">
-    <div class="md:w-900 w-full md:px-0 px-66 mx-auto">
-      <h1 class="text-center font-bold font-frank md:text-35 text-25 leading-104% "><?= $section_1["title"] ?></h1>
+    <div class="md:w-900 w-full mx-auto">
+      <h1 class="text-center font-bold font-frank md:text-35 text-25 leading-104% md:px-0 px-66">
+        <?= $section_1["title"] ?>
+      </h1>
       <div class="flex justify-center items-center gap-12 my-40">
         <div class="w-22 h-1 bg-amarillo"></div>
         <span class="font-covered text-28 text-amarillo"><?= $section_1["phrase"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
-      <p class="mt-20 md:text-16 text-13 text-center">
+      <p class="mt-20 md:text-16 text-13 text-center md:px-0 px-66">
         <?= $section_1["text"] ?>
       </p>
     </div>
@@ -46,7 +48,7 @@ get_header();
 <!-- ------------ SECTION 2 ----------------- -->
 <section id="servicios" class="pt-108">
   <div class="container">
-    <h2 class="text-center md:px-0 px-66"><?= $section_2["title"] ?></h2>
+    <h2 class="text-center"><?= $section_2["title"] ?></h2>
     <div class="flex justify-center items-center gap-12 md:mt-55 mt-40">
       <div class="w-22 h-1 bg-amarillo"></div>
       <span class="font-covered text-28 text-amarillo"><?= $section_2["phrase"] ?></span>
@@ -124,18 +126,18 @@ get_header();
   <div class="flex md:flex-row flex-col bg-naranja ">
     <div class="md:w-50% w-full grid items-center md:pl-233 pl-28 md:pr-60 pr-28 py-40">
       <div>
-        <div class="flex justify-start items-center gap-12 mb-15">
+        <div class="flex justify-start items-center md:gap-12 gap-3 mb-15">
           <div class="w-22 h-1 bg-negro_light"></div>
           <span
-            class="font-covered text-22 text-negro_light text-center md:text-left "><?= $section_4["mision_phrase"] ?></span>
+            class="font-covered text-28 text-negro_light text-center md:text-left "><?= $section_4["mision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
         </div>
         <h2 class="MyV relative inline-block text-white"><?= $section_4["mision_title"] ?></h2>
         <p class="md:text-16 text-13 text-white mt-20"><?= $section_4["mision_text"] ?></p>
-        <div class="flex justify-start items-center gap-12 my-15">
+        <div class="flex justify-start items-center md:gap-12 gap-3 my-15">
           <div class="w-22 h-1 bg-negro_light"></div>
           <span
-            class="font-covered text-22 text-negro_light text-center md:text-left"><?= $section_4["vision_phrase"] ?></span>
+            class="font-covered text-28 text-negro_light text-center md:text-left"><?= $section_4["vision_phrase"] ?></span>
           <div class="w-22 h-1 bg-negro_light"></div>
         </div>
         <h2 class="MyV2 relative inline-block text-white"><?= $section_4["vision_title"] ?></h2>
@@ -158,7 +160,8 @@ get_header();
         <h2 class="text-center"><?= $section_5["title"] ?></h2>
         <div class="flex justify-center items-center gap-12 md:my-35 my-30">
           <div class="w-22 h-1 bg-amarillo"></div>
-          <span class="font-covered text-28 text-amarillo text-center"><?= $section_5["phrase"] ?></span>
+          <span
+            class="font-covered text-28 text-amarillo text-center md:w-auto w-235"><?= $section_5["phrase"] ?></span>
           <div class="w-22 h-1 bg-amarillo"></div>
         </div>
         <p class="text-center md:text-16 text-13 md:px-0 px-25"><?= $section_5["text"] ?></p>
