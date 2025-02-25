@@ -307,14 +307,15 @@ get_header();
     <?= wp_get_attachment_image($section_10['imagen_2'], 'full') ?>
   </div>
 
-  <div class="py-47 px-54 bg-blue md:!w-50% w-full md:h-217 h-auto flex justify-between forma-parte">
+  <div class="py-47 px-54 bg-blue md:!w-50% w-full md:h-217 h-auto flex justify-between bg-cover bg-no-repeat"
+    style="background-image: url('<?= $section_10["imagen_fondo"] ?>')">
     <div class="flex flex-col">
       <span class="font-covered text-28 text-amarillo"><?= $section_10["phrase"] ?></span>
       <p class="font-bond text-25 text-white"><?= $section_10["title"] ?></p>
-      <a href="tel:<?= $section_10["phone"] ?>"
+      <a href="tel:<?= $section_10["phone"] ?>" target="_blank"
         class="decoration-none mt-26 md:text-16 text-20 font-600 text-white hover:text-naranja">
         <?= $section_10["phone"] ?></a>
-      <a href="mailto:<?= $section_10["email"] ?>"
+      <a href="mailto:<?= $section_10["email"] ?>" target="_blank"
         class="decoration-none md:text-16 text-20 font-600 text-white hover:text-naranja">
         <?= $section_10["email"] ?></a>
     </div>
