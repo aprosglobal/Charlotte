@@ -5,24 +5,26 @@
  */
 $form = get_field('form');
 $subtitulo = get_field('subtitulo');
+$frase = get_field('subtitulo');
 $descripcion = get_field('descripcion');
+$datos = get_field('datos');
 get_header();
 ?>
 <section class="container mt-96 ">
 	<h1 class="font-500 text-28 text-center text-amarillon hidden"><?= the_title(); ?></h1>
-	<p class="font-700 text-35 text-center mt-10">¡Queremos Conocer Tu Opinión!</p>
+	<p class="font-700 text-35 text-center mt-10"><?= $subtitulo ?></p>
 	<div class="flex justify-center items-center gap-12 mt-10 mb-20">
 		<div class="w-22 h-1 bg-amarillo"></div>
-		<span class="font-covered text-24 text-amarillo"><?= $subtitulo ?></span>
+		<span class="font-covered text-24 text-amarillo"><?= $frase ?></span>
 		<div class="w-22 h-1 bg-amarillo"></div>
 	</div>
 	<div class="md:w-686 w-full mt-20 bg-azul text-white py-30 px-20 mx-auto">
 		<p class="text-white font-500 text-18 text-center"><?= $descripcion ?></p>
 	</div>
 	<div class="grid md:grid-cols-3 grid-cols-1 md:gap-0 gap-10 mt-38">
-		<p class="text-17 text-center">Razón social: <b>Charlotte S.A</b></p>
-		<p class="text-17 text-center">Razón social: <b>20101152724</b></p>
-		<p class="text-17 text-center">Dirección: <b>Av. de la Floresta, 15038, Lima</b></p>
+		<p class="text-17 text-center">Razón social: <b><?= $datos['razon_social'] ?></b></p>
+		<p class="text-17 text-center">RUC: <b><?= $datos['ruc'] ?></b></p>
+		<p class="text-17 text-center">Dirección: <b><?= $datos['direccion'] ?></b></p>
 	</div>
 	<div class=" mx-auto mt-50 mb-89">
 		<?= do_shortcode($form) ?>
@@ -30,222 +32,222 @@ get_header();
 </section>
 <script>
 	var departamentos = [{
-			id_ubigeo: "2534",
-			nombre_ubigeo: "Amazonas",
-			codigo_ubigeo: "01",
-			etiqueta_ubigeo: "Amazonas, Perú",
-			buscador_ubigeo: "amazonas perú",
-			numero_hijos_ubigeo: "7",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "2625",
-			nombre_ubigeo: "Ancash",
-			codigo_ubigeo: "02",
-			etiqueta_ubigeo: "Ancash, Perú",
-			buscador_ubigeo: "ancash perú",
-			numero_hijos_ubigeo: "20",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "2812",
-			nombre_ubigeo: "Apurimac",
-			codigo_ubigeo: "03",
-			etiqueta_ubigeo: "Apurimac, Perú",
-			buscador_ubigeo: "apurimac perú",
-			numero_hijos_ubigeo: "7",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "2900",
-			nombre_ubigeo: "Arequipa",
-			codigo_ubigeo: "04",
-			etiqueta_ubigeo: "Arequipa, Perú",
-			buscador_ubigeo: "arequipa perú",
-			numero_hijos_ubigeo: "8",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3020",
-			nombre_ubigeo: "Ayacucho",
-			codigo_ubigeo: "05",
-			etiqueta_ubigeo: "Ayacucho, Perú",
-			buscador_ubigeo: "ayacucho perú",
-			numero_hijos_ubigeo: "11",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3143",
-			nombre_ubigeo: "Cajamarca",
-			codigo_ubigeo: "06",
-			etiqueta_ubigeo: "Cajamarca, Perú",
-			buscador_ubigeo: "cajamarca perú",
-			numero_hijos_ubigeo: "13",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3292",
-			nombre_ubigeo: "Cusco",
-			codigo_ubigeo: "08",
-			etiqueta_ubigeo: "Cusco, Perú",
-			buscador_ubigeo: "cusco perú",
-			numero_hijos_ubigeo: "13",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3414",
-			nombre_ubigeo: "Huancavelica",
-			codigo_ubigeo: "09",
-			etiqueta_ubigeo: "Huancavelica, Perú",
-			buscador_ubigeo: "huancavelica perú",
-			numero_hijos_ubigeo: "7",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3518",
-			nombre_ubigeo: "Huanuco",
-			codigo_ubigeo: "10",
-			etiqueta_ubigeo: "Huanuco, Perú",
-			buscador_ubigeo: "huanuco perú",
-			numero_hijos_ubigeo: "11",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3606",
-			nombre_ubigeo: "Ica",
-			codigo_ubigeo: "11",
-			etiqueta_ubigeo: "Ica, Perú",
-			buscador_ubigeo: "ica perú",
-			numero_hijos_ubigeo: "5",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3655",
-			nombre_ubigeo: "Junin",
-			codigo_ubigeo: "12",
-			etiqueta_ubigeo: "Junin, Perú",
-			buscador_ubigeo: "junin perú",
-			numero_hijos_ubigeo: "9",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3788",
-			nombre_ubigeo: "La Libertad",
-			codigo_ubigeo: "13",
-			etiqueta_ubigeo: "La Libertad, Perú",
-			buscador_ubigeo: "la libertad perú",
-			numero_hijos_ubigeo: "12",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3884",
-			nombre_ubigeo: "Lambayeque",
-			codigo_ubigeo: "14",
-			etiqueta_ubigeo: "Lambayeque, Perú",
-			buscador_ubigeo: "lambayeque perú",
-			numero_hijos_ubigeo: "3",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "3926",
-			nombre_ubigeo: "Lima",
-			codigo_ubigeo: "15",
-			etiqueta_ubigeo: "Lima, Perú",
-			buscador_ubigeo: "lima perú",
-			numero_hijos_ubigeo: "10",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4108",
-			nombre_ubigeo: "Loreto",
-			codigo_ubigeo: "16",
-			etiqueta_ubigeo: "Loreto, Perú",
-			buscador_ubigeo: "loreto perú",
-			numero_hijos_ubigeo: "6",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4165",
-			nombre_ubigeo: "Madre de Dios",
-			codigo_ubigeo: "17",
-			etiqueta_ubigeo: "Madre de Dios, Perú",
-			buscador_ubigeo: "madre de dios perú",
-			numero_hijos_ubigeo: "3",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4180",
-			nombre_ubigeo: "Moquegua",
-			codigo_ubigeo: "18",
-			etiqueta_ubigeo: "Moquegua, Perú",
-			buscador_ubigeo: "moquegua perú",
-			numero_hijos_ubigeo: "3",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4204",
-			nombre_ubigeo: "Pasco",
-			codigo_ubigeo: "19",
-			etiqueta_ubigeo: "Pasco, Perú",
-			buscador_ubigeo: "pasco perú",
-			numero_hijos_ubigeo: "3",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4236",
-			nombre_ubigeo: "Piura",
-			codigo_ubigeo: "20",
-			etiqueta_ubigeo: "Piura, Perú",
-			buscador_ubigeo: "piura perú",
-			numero_hijos_ubigeo: "8",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4309",
-			nombre_ubigeo: "Puno",
-			codigo_ubigeo: "21",
-			etiqueta_ubigeo: "Puno, Perú",
-			buscador_ubigeo: "puno perú",
-			numero_hijos_ubigeo: "13",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4431",
-			nombre_ubigeo: "San Martin",
-			codigo_ubigeo: "22",
-			etiqueta_ubigeo: "San Martin, Perú",
-			buscador_ubigeo: "san martin perú",
-			numero_hijos_ubigeo: "10",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4519",
-			nombre_ubigeo: "Tacna",
-			codigo_ubigeo: "23",
-			etiqueta_ubigeo: "Tacna, Perú",
-			buscador_ubigeo: "tacna perú",
-			numero_hijos_ubigeo: "4",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4551",
-			nombre_ubigeo: "Tumbes",
-			codigo_ubigeo: "24",
-			etiqueta_ubigeo: "Tumbes, Perú",
-			buscador_ubigeo: "tumbes perú",
-			numero_hijos_ubigeo: "3",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}, {
-			id_ubigeo: "4567",
-			nombre_ubigeo: "Ucayali",
-			codigo_ubigeo: "25",
-			etiqueta_ubigeo: "Ucayali, Perú",
-			buscador_ubigeo: "ucayali perú",
-			numero_hijos_ubigeo: "4",
-			nivel_ubigeo: "1",
-			id_padre_ubigeo: "2533"
-		}],
+		id_ubigeo: "2534",
+		nombre_ubigeo: "Amazonas",
+		codigo_ubigeo: "01",
+		etiqueta_ubigeo: "Amazonas, Perú",
+		buscador_ubigeo: "amazonas perú",
+		numero_hijos_ubigeo: "7",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "2625",
+		nombre_ubigeo: "Ancash",
+		codigo_ubigeo: "02",
+		etiqueta_ubigeo: "Ancash, Perú",
+		buscador_ubigeo: "ancash perú",
+		numero_hijos_ubigeo: "20",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "2812",
+		nombre_ubigeo: "Apurimac",
+		codigo_ubigeo: "03",
+		etiqueta_ubigeo: "Apurimac, Perú",
+		buscador_ubigeo: "apurimac perú",
+		numero_hijos_ubigeo: "7",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "2900",
+		nombre_ubigeo: "Arequipa",
+		codigo_ubigeo: "04",
+		etiqueta_ubigeo: "Arequipa, Perú",
+		buscador_ubigeo: "arequipa perú",
+		numero_hijos_ubigeo: "8",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3020",
+		nombre_ubigeo: "Ayacucho",
+		codigo_ubigeo: "05",
+		etiqueta_ubigeo: "Ayacucho, Perú",
+		buscador_ubigeo: "ayacucho perú",
+		numero_hijos_ubigeo: "11",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3143",
+		nombre_ubigeo: "Cajamarca",
+		codigo_ubigeo: "06",
+		etiqueta_ubigeo: "Cajamarca, Perú",
+		buscador_ubigeo: "cajamarca perú",
+		numero_hijos_ubigeo: "13",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3292",
+		nombre_ubigeo: "Cusco",
+		codigo_ubigeo: "08",
+		etiqueta_ubigeo: "Cusco, Perú",
+		buscador_ubigeo: "cusco perú",
+		numero_hijos_ubigeo: "13",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3414",
+		nombre_ubigeo: "Huancavelica",
+		codigo_ubigeo: "09",
+		etiqueta_ubigeo: "Huancavelica, Perú",
+		buscador_ubigeo: "huancavelica perú",
+		numero_hijos_ubigeo: "7",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3518",
+		nombre_ubigeo: "Huanuco",
+		codigo_ubigeo: "10",
+		etiqueta_ubigeo: "Huanuco, Perú",
+		buscador_ubigeo: "huanuco perú",
+		numero_hijos_ubigeo: "11",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3606",
+		nombre_ubigeo: "Ica",
+		codigo_ubigeo: "11",
+		etiqueta_ubigeo: "Ica, Perú",
+		buscador_ubigeo: "ica perú",
+		numero_hijos_ubigeo: "5",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3655",
+		nombre_ubigeo: "Junin",
+		codigo_ubigeo: "12",
+		etiqueta_ubigeo: "Junin, Perú",
+		buscador_ubigeo: "junin perú",
+		numero_hijos_ubigeo: "9",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3788",
+		nombre_ubigeo: "La Libertad",
+		codigo_ubigeo: "13",
+		etiqueta_ubigeo: "La Libertad, Perú",
+		buscador_ubigeo: "la libertad perú",
+		numero_hijos_ubigeo: "12",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3884",
+		nombre_ubigeo: "Lambayeque",
+		codigo_ubigeo: "14",
+		etiqueta_ubigeo: "Lambayeque, Perú",
+		buscador_ubigeo: "lambayeque perú",
+		numero_hijos_ubigeo: "3",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "3926",
+		nombre_ubigeo: "Lima",
+		codigo_ubigeo: "15",
+		etiqueta_ubigeo: "Lima, Perú",
+		buscador_ubigeo: "lima perú",
+		numero_hijos_ubigeo: "10",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4108",
+		nombre_ubigeo: "Loreto",
+		codigo_ubigeo: "16",
+		etiqueta_ubigeo: "Loreto, Perú",
+		buscador_ubigeo: "loreto perú",
+		numero_hijos_ubigeo: "6",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4165",
+		nombre_ubigeo: "Madre de Dios",
+		codigo_ubigeo: "17",
+		etiqueta_ubigeo: "Madre de Dios, Perú",
+		buscador_ubigeo: "madre de dios perú",
+		numero_hijos_ubigeo: "3",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4180",
+		nombre_ubigeo: "Moquegua",
+		codigo_ubigeo: "18",
+		etiqueta_ubigeo: "Moquegua, Perú",
+		buscador_ubigeo: "moquegua perú",
+		numero_hijos_ubigeo: "3",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4204",
+		nombre_ubigeo: "Pasco",
+		codigo_ubigeo: "19",
+		etiqueta_ubigeo: "Pasco, Perú",
+		buscador_ubigeo: "pasco perú",
+		numero_hijos_ubigeo: "3",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4236",
+		nombre_ubigeo: "Piura",
+		codigo_ubigeo: "20",
+		etiqueta_ubigeo: "Piura, Perú",
+		buscador_ubigeo: "piura perú",
+		numero_hijos_ubigeo: "8",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4309",
+		nombre_ubigeo: "Puno",
+		codigo_ubigeo: "21",
+		etiqueta_ubigeo: "Puno, Perú",
+		buscador_ubigeo: "puno perú",
+		numero_hijos_ubigeo: "13",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4431",
+		nombre_ubigeo: "San Martin",
+		codigo_ubigeo: "22",
+		etiqueta_ubigeo: "San Martin, Perú",
+		buscador_ubigeo: "san martin perú",
+		numero_hijos_ubigeo: "10",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4519",
+		nombre_ubigeo: "Tacna",
+		codigo_ubigeo: "23",
+		etiqueta_ubigeo: "Tacna, Perú",
+		buscador_ubigeo: "tacna perú",
+		numero_hijos_ubigeo: "4",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4551",
+		nombre_ubigeo: "Tumbes",
+		codigo_ubigeo: "24",
+		etiqueta_ubigeo: "Tumbes, Perú",
+		buscador_ubigeo: "tumbes perú",
+		numero_hijos_ubigeo: "3",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}, {
+		id_ubigeo: "4567",
+		nombre_ubigeo: "Ucayali",
+		codigo_ubigeo: "25",
+		etiqueta_ubigeo: "Ucayali, Perú",
+		buscador_ubigeo: "ucayali perú",
+		numero_hijos_ubigeo: "4",
+		nivel_ubigeo: "1",
+		id_padre_ubigeo: "2533"
+	}],
 		provincias = [{
 			2534: [{
 				id_ubigeo: "2557",
@@ -18714,7 +18716,7 @@ get_header();
 </script>
 
 <script>
-	jQuery(document).ready(function($) {
+	jQuery(document).ready(function ($) {
 
 		//listar departamentos
 
@@ -18722,13 +18724,13 @@ get_header();
 		if (typeof departamentos !== 'undefined') {
 
 			var select01 = '';
-			$.each(departamentos, function(i, obj) {
+			$.each(departamentos, function (i, obj) {
 				select01 = '<option value="' + departamentos[i].id_ubigeo + '">' + departamentos[i].nombre_ubigeo + '</option>';
 				$('#select-departamento').append(select01);
 			});
 
 			//listar provincias por departamento
-			$('#select-departamento').on('change', function() {
+			$('#select-departamento').on('change', function () {
 
 				//limpiar los selects	
 				$('#select-provincia').find('option').remove();
@@ -18737,13 +18739,13 @@ get_header();
 				var iddep = this.value;
 				var select02 = '';
 
-				var provincias_result = jQuery.grep(provincias, function(obj) {
+				var provincias_result = jQuery.grep(provincias, function (obj) {
 					return obj[iddep];
 				});
 
 				var provincias_result_array = provincias_result[0][iddep];
 
-				$.each(provincias_result_array, function(i, obj) {
+				$.each(provincias_result_array, function (i, obj) {
 					select02 = '<option value="' + provincias_result_array[i].id_ubigeo + '">' + provincias_result_array[i].nombre_ubigeo + '</option>';
 					$('#select-provincia').append(select02);
 				});
@@ -18757,7 +18759,7 @@ get_header();
 			});
 
 			//listar distritos por provincia
-			$('#select-provincia').on('change', function() {
+			$('#select-provincia').on('change', function () {
 
 				//limpiar el select de distritos		
 				$('#select-distrito').find('option').remove();
@@ -18765,13 +18767,13 @@ get_header();
 				var idpro = this.value;
 				var select03 = '';
 
-				var distritos_result = jQuery.grep(distritos, function(obj) {
+				var distritos_result = jQuery.grep(distritos, function (obj) {
 					return obj[idpro];
 				});
 
 				var distritos_result_array = distritos_result[0][idpro];
 
-				$.each(distritos_result_array, function(i, obj) {
+				$.each(distritos_result_array, function (i, obj) {
 					select03 = '<option value="' + distritos_result_array[i].id_ubigeo + '">' + distritos_result_array[i].nombre_ubigeo + '</option>';
 					$('#select-distrito').append(select03);
 				});
@@ -18782,7 +18784,7 @@ get_header();
 
 			});
 
-			$('#select-distrito').on('change', function() {
+			$('#select-distrito').on('change', function () {
 				$(".distrito-class").val($('#select-distrito option:selected').text());
 			});
 
