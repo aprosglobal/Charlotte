@@ -276,7 +276,7 @@ get_header();
         <span class="font-covered text-28 text-amarillo text-center"><?= $section_9["phrase_contact"] ?></span>
         <div class="w-22 h-1 bg-amarillo"></div>
       </div>
-      <p><b>L<?= $section_9["phone"]['clave'] ?>:</b> <a href="tel:<?= $section_9["phone"]['valor'] ?>"
+      <p><b><?= $section_9["phone"]['clave'] ?>:</b> <a href="tel:<?= $section_9["phone"]['valor'] ?>"
           class="decoration-none"><?= $section_9["phone"]['valor'] ?></a>
       </p>
       <p><b><?= $section_9["phone"]['clave'] ?>:</b> <a href="mailto:<?= $section_9["email"]['valor'] ?>"
