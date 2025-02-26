@@ -1,2 +1,2 @@
-import './home/index';
-
+import "./home/index";
+import "./concesionarios/index";
